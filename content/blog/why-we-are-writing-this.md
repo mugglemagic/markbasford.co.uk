@@ -2,7 +2,7 @@
 ref: FR-0000
 title: "Why We're Writing This (And Why Now)"
 author: "Mark Basford"
-date: 2025-01-15
+date: 2026-03-28
 tags: [architecture, accessibility, enterprise, ai-assisted-development]
 series: "Architecting for Everything"
 part: 1
