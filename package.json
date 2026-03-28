@@ -20,6 +20,8 @@
   "dependencies": {
     "@tribepad/themis": "^1.0.15",
     "@types/hast": "^3.0.4",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "geist": "^1.7.0",
     "gray-matter": "^4.0.3",
     "next": "^16.2.1",

@@ -7,6 +7,8 @@ import { SkipLink } from '@/components/SkipLink'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { getThemeFromCookie } from '@/lib/theme'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import '@/styles/globals.css'
 
 const SITE_URL = 'https://markbasford.dev'
@@ -103,6 +105,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
