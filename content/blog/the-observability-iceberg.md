@@ -7,6 +7,7 @@ tags: [observability, telemetry, opentelemetry, tracing, performance, debugging]
 series: "Architecting for Everything"
 part: 7
 word_count: 1467
+published: false
 estimated_reading_time: "10 min"
 research_sources:
   - TELEMETRY_GUIDE.md

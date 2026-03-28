@@ -16,6 +16,7 @@ export interface PostFrontmatter {
   word_count: number
   estimated_reading_time: string
   research_sources?: string[]
+  published?: boolean
 }
 
 export interface Post {
@@ -69,16 +70,18 @@ function readMarkdownFiles<T>(dir: string): { slug: string; frontmatter: T; cont
 
 export async function getAllPosts(): Promise<Post[]> {
   const posts = readMarkdownFiles<PostFrontmatter>(BLOG_DIR)
-  return posts.sort((a, b) => {
-    const dateA = new Date(a.frontmatter.date).getTime()
-    const dateB = new Date(b.frontmatter.date).getTime()
-    return dateB - dateA
-  })
+  return posts
+    .filter(p => p.frontmatter.published !== false)
+    .sort((a, b) => {
+      const dateA = new Date(a.frontmatter.date).getTime()
+      const dateB = new Date(b.frontmatter.date).getTime()
+      return dateB - dateA
+    })
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
   const posts = readMarkdownFiles<PostFrontmatter>(BLOG_DIR)
-  return posts.find(p => p.slug === slug) ?? null
+  return posts.find(p => p.slug === slug && p.frontmatter.published !== false) ?? null
 }
 
 export async function getAllSeries(): Promise<{ name: string; slug: string; postCount: number }[]> {

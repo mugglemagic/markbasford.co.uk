@@ -7,6 +7,7 @@ tags: [accessibility, testing, wcag, screen-readers, automation]
 series: "Architecting for Everything"
 part: 5
 word_count: 1498
+published: false
 estimated_reading_time: "10 min"
 research_sources:
   - 0003-component-library-hybrid-approach.md

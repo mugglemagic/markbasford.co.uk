@@ -7,6 +7,7 @@ tags: [accessibility, components, themis, wcag, touch-targets]
 series: "Architecting for Everything"
 part: 4
 word_count: 1467
+published: false
 estimated_reading_time: "10 min"
 research_sources:
   - 0003-component-library-hybrid-approach.md

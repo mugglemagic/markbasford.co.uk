@@ -7,6 +7,7 @@ tags: [security, architecture, authentication, csrf, jwt, server-actions]
 series: "Architecting for Everything"
 part: 6
 word_count: 1482
+published: false
 estimated_reading_time: "10 min"
 research_sources:
   - SECURITY_ARCHITECTURE.md

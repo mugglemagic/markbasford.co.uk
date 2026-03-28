@@ -7,6 +7,7 @@ tags: [architecture, developer-experience, documentation, nextjs, mdx]
 series: "Developer Experience"
 part: 4
 word_count: 1150
+published: false
 estimated_reading_time: "8 min"
 research_sources:
   - apps/docs/manifest.json
