@@ -10,6 +10,8 @@ word_count: 1487
 estimated_reading_time: "10 min"
 ---
 
+![The three Forth bridges at sunset — Queensferry Crossing, Forth Road Bridge, and Forth Bridge spanning the Firth of Forth](/blog/queensferry-crossing.webp)
+
 In 2017, Scotland opened the Queensferry Crossing. Not because the Forth Road Bridge had failed - it hadn't. The old bridge still stands, still carries traffic, still does the job it was designed for decades ago. But the demands had changed. The volume of traffic, the weight of modern vehicles, the expectations of what a crossing should handle - the original bridge couldn't grow into that future. So they built a new one alongside it.
 
 We found ourselves thinking about that bridge quite a lot last year.

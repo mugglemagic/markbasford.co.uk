@@ -47,7 +47,7 @@ The landscape is crowded. Material UI, Chakra UI, Radix, Headless UI, various Ta
 
 Material UI is battle-tested - Netflix uses it, Amazon uses it. But 133KB gzipped is substantial, and Material Design's aesthetic would require significant customisation to match our brand. More importantly, its CSS-in-JS approach would conflict with our Tailwind and Theme Provider architecture. We'd be running two parallel styling systems.
 
-Chakra UI v3 genuinely impressed us. The team did remarkable work on the rewrite - 50% bundle reduction, proper tree-shaking, accessibility that's clearly a priority. For a while, it was our leading candidate.
+Chakra UI v3 genuinely impressed us. The team did remarkable work on the rewrite - significant bundle reductions by dropping Framer Motion in favour of CSS animations, proper tree-shaking, accessibility that's clearly a priority. For a while, it was our leading candidate.
 
 Radix and the various ShadCN implementations looked promising. Copy-paste ownership, Tailwind-native, active community. But professional accessibility audits we reviewed found issues that would require fixing. Why volunteer for extra work when other options handle it properly?
 
