@@ -1,9 +1,9 @@
 ---
 title: "The Three-Layer Component Architecture"
 author: "Mark Basford"
-date: 2025-12-01
+date: 2026-03-28
 tags: [accessibility, components, architecture, wcag, react-aria]
-estimated_reading_time: "45 min"
+estimated_reading_time: "50 min"
 ---
 
 # The Three-Layer Component Architecture
@@ -15,8 +15,8 @@ estimated_reading_time: "45 min"
 ---
 
 **Author**: Mark Basford
-**Version**: 1.0
-**Date**: December 2025
+**Version**: 1.1
+**Date**: March 2026
 **Classification**: Public
 
 ---
@@ -33,10 +33,10 @@ This white paper introduces the **Three-Layer Component Architecture**, a design
 |--------|---------|--------|
 | Website failure rate | **94.8%** of top 1M sites fail accessibility | WebAIM Million 2025 |
 | Touch error increase | **3x higher** error rates for motor-impaired users on small targets | PMC Research |
-| Conversion impact | Good UI increases conversion by up to **400%** | Forrester Research (2009) |
+| Conversion impact | Good UX increases lead conversion by up to **400%** | Forrester Research (2009) |
 | Legal risk | **2,019 lawsuits** filed in H1 2025 (37% increase) | EcomBack Report |
 | Widget failures | **456 lawsuits** targeted sites using accessibility widgets | 2025 Mid-Year Report |
-| Framework correlation | React sites average **50+ errors**, Vue.js **62+ errors** | WebAIM Million |
+| Framework correlation | React sites average **42.4 errors**, Vue.js **58.7 errors** | WebAIM Million |
 
 The Three-Layer Architecture provides a path forward: uncompromising accessibility with unrestricted visual design. It's not about choosing between users with disabilities and users who appreciate beautiful design—it's about serving everyone excellently.
 
@@ -52,8 +52,33 @@ The Three-Layer Architecture provides a path forward: uncompromising accessibili
 6. [Implementation Guide: Building a Button Component](#part-vi-implementation-guide-building-a-button-component)
 7. [Addressing the Gap Challenge](#part-vii-addressing-the-gap-challenge)
 8. [Related Approaches and Prior Art](#part-viii-related-approaches-and-prior-art)
-9. [Conclusion and Call to Action](#part-ix-conclusion-and-call-to-action)
-10. [References](#references)
+9. [Limitations and Future Work](#part-ix-limitations-and-future-work)
+10. [Conclusion and Call to Action](#part-x-conclusion-and-call-to-action)
+11. [References](#references)
+12. [Glossary](#glossary)
+
+---
+
+## Glossary
+
+| Term | Definition |
+|------|-----------|
+| **ARIA** | Accessible Rich Internet Applications — a set of HTML attributes that define ways to make web content more accessible to people with disabilities |
+| **CVA** | Class Variance Authority — a utility for managing CSS class variants in component libraries |
+| **CSS pixel** | An abstract unit of measurement used in web design; 1 CSS pixel ≈ 0.26mm at standard viewing distance |
+| **dp** | Density-independent pixel — Android's unit for UI sizing, equivalent to 1 CSS pixel at standard density |
+| **EAA** | European Accessibility Act — EU directive requiring digital products and services to be accessible, enforceable from June 2025 |
+| **EN 301 549** | European standard for ICT accessibility requirements, referenced by the EAA |
+| **Fitts' Law** | A predictive model of human movement that describes the time required to move to a target as a function of distance and target size |
+| **Headless UI** | A component library that provides behaviour and accessibility without visual styling |
+| **Layer 1** | The accessibility/touch target layer in the Three-Layer Architecture — the invisible interactive element |
+| **Layer 2** | The visual/presentation layer — provides designed appearance independent of touch target size |
+| **Layer 3** | The content/state layer — text, icons, state indicators, and visual effects |
+| **POUR** | Perceivable, Operable, Understandable, Robust — the four principles of WCAG |
+| **React Aria** | Adobe's library of React hooks providing accessible UI primitives |
+| **Touch target** | The area of the screen that responds to a user's tap or click; WCAG 2.2 AAA requires a minimum of 44×44 CSS pixels |
+| **WCAG** | Web Content Accessibility Guidelines — the international standard for web accessibility, published by the W3C |
+| **WCAG 2.2 AAA** | The highest conformance level of WCAG 2.2, requiring the most stringent accessibility criteria |
 
 ---
 
@@ -133,18 +158,18 @@ The journey to our current accessibility crisis began with good intentions. The 
 Timeline of WCAG Development
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1999        2008        2018        2023        2024        Future
-  │           │           │           │           │           │
-  ▼           ▼           ▼           ▼           ▼           ▼
-┌─────┐    ┌─────┐    ┌─────┐    ┌─────┐    ┌─────┐    ┌─────┐
-│WCAG │    │WCAG │    │WCAG │    │WCAG │    │WCAG │    │WCAG │
-│ 1.0 │    │ 2.0 │    │ 2.1 │    │ 2.2 │    │2.2.1│    │ 3.0 │
-└─────┘    └─────┘    └─────┘    └─────┘    └─────┘    └─────┘
-   │           │           │           │           │           │
-   │           │           │           │           │           │
-HTML-      Technology  Mobile &   Focus      Update    Complete
-focused    agnostic    cognitive  indicators            overhaul
-14 guide-  61 success  +17 new    +9 new
+1999        2008        2018        2023                    Future
+  │           │           │           │                       │
+  ▼           ▼           ▼           ▼                       ▼
+┌─────┐    ┌─────┐    ┌─────┐    ┌─────┐                 ┌─────┐
+│WCAG │    │WCAG │    │WCAG │    │WCAG │                 │WCAG │
+│ 1.0 │    │ 2.0 │    │ 2.1 │    │ 2.2 │                 │ 3.0 │
+└─────┘    └─────┘    └─────┘    └─────┘                 └─────┘
+   │           │           │           │                       │
+   │           │           │           │                       │
+HTML-      Technology  Mobile &   Focus                   Complete
+focused    agnostic    cognitive  indicators               overhaul
+14 guide-  61 success  +17 new    +9 new                  (~2028)
 lines      criteria    criteria   criteria
 ```
 
@@ -155,6 +180,8 @@ lines      criteria    criteria   criteria
 **WCAG 2.1 (2018)**: Finally addressed mobile and cognitive accessibility with 17 new success criteria. Critically, this version introduced **Success Criterion 2.5.5: Target Size (Enhanced)** at Level AAA, requiring 44×44 CSS pixel touch targets. But because it was AAA (not AA), most organisations ignored it.
 
 **WCAG 2.2 (2023)**: Added 9 new success criteria, including **2.5.8: Target Size (Minimum)** at Level AA, requiring 24×24 CSS pixels. This was progress, but the damage was done—a decade of mobile-first design had normalised tiny touch targets.
+
+**WCAG 3.0 (Working Draft, expected ~2028)**: A complete overhaul of the conformance model. The familiar A/AA/AAA levels will be replaced by **Bronze, Silver, and Gold** ratings, with more flexible evaluation methods including rubrics, sliding scales, and user research validation. While still years from completion, WCAG 3.0 signals a shift from binary pass/fail criteria toward a more nuanced understanding of accessibility quality—one that aligns well with architectural approaches like the Three-Layer pattern.
 
 ## The WebAIM Million: Seven Years of Evidence
 
@@ -244,27 +271,26 @@ Distribution of Accessibility Errors (2025)
 Low contrast text          ████████████████████████████████████████ 79.1%
                            (29.6 instances per page)
 
-Missing alt text           ████████████████████████ 54.5%
+Missing alt text           █████████████████████████ 55.5%
 
-Empty links                ██████████████████████ 48.6%
-
-Missing form labels        ████████████████████ 46.1%
+Missing form labels        ██████████████████████ 48.2%
                            (Getting WORSE year-over-year)
 
-Empty buttons              ██████████████████ 43.8%
-                           (Getting WORSE year-over-year)
+Empty links                ████████████████████ 45.4%
 
-Missing document language  ████████████████ 37.9%
+Empty buttons              █████████████ 29.6%
+
+Missing document language  ███████ 15.8%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-These 6 categories account for 96.4% of ALL detected errors
+These 6 categories account for 96% of ALL detected errors
 ```
 
 **Addressing just these six issues would transform web accessibility.** Yet year after year, they persist.
 
 ## The Framework Factor
 
-Modern JavaScript frameworks correlate with increased accessibility errors:
+The relationship between JavaScript frameworks and accessibility errors is nuanced — React sites now average slightly fewer errors than sites with no framework, but Vue.js and UI libraries like Bootstrap and jQuery UI correlate with significantly more:
 
 ```
 Average Errors by Framework (2025)
@@ -272,9 +298,9 @@ Average Errors by Framework (2025)
 
 No framework    ████████████████████████████████████████████ ~45 errors
 
-React           ██████████████████████████████████████████████████ 50.1 errors
+React           ██████████████████████████████████████████ 42.4 errors
 
-Vue.js          ████████████████████████████████████████████████████████████ 62.3 errors
+Vue.js          ██████████████████████████████████████████████████████████ 58.7 errors
 
 Bootstrap       +12.9 additional errors when present
 
@@ -285,9 +311,9 @@ jQuery UI       +15.2 additional errors when present
 
 Ironically, pages trying harder to be accessible often fail more:
 
-- ARIA usage has **quadrupled** since 2019 (now 89 ARIA attributes per page on average)
-- Pages with ARIA present average **34.2% more errors** than pages without
-- 74.6% of home pages now use ARIA (up from 60.1% in 2019)
+- ARIA usage has increased nearly **5x** since 2019 (now 106 ARIA attributes per page on average)
+- Pages with ARIA present average **111% more errors** than pages without (57 vs 27 errors)
+- 79.4% of home pages now use ARIA (up from 60.1% in 2019)
 
 This isn't because ARIA is bad—it's because developers are using it incorrectly, without understanding the underlying accessibility principles.
 
@@ -299,7 +325,8 @@ The accessibility lawsuit landscape has intensified dramatically:
 
 | Metric | Value |
 |--------|-------|
-| Total federal lawsuits | 4,187 |
+| ADA Title III federal lawsuits (all) | 8,800 |
+| Web accessibility-specific lawsuits | ~4,187 |
 | Year-over-year change | +7% |
 | Repeat lawsuits (same company sued again) | 41% |
 | Lawsuits against widget users | 25%+ |
@@ -343,6 +370,21 @@ In 2024-2025, the accessibility widget industry faced a reckoning:
 - Widgets failed to provide legal protection in **100% of tested cases**
 
 **Accessibility cannot be retrofitted with a JavaScript overlay.** The architecture must be built right from the start.
+
+### The European Accessibility Act (EAA)
+
+While US litigation has driven much of the accessibility conversation, the **European Accessibility Act** came into force on **28 June 2025**, creating the most significant global shift in accessibility regulation to date:
+
+| Aspect | Detail |
+|--------|--------|
+| Scope | All EU member states + non-EU businesses selling to EU customers |
+| Standard | EN 301 549, which references WCAG 2.1 AA |
+| Penalties | Up to **€100,000** or **4% of annual revenue** |
+| Coverage | Websites, mobile apps, e-commerce, banking, transport, e-books |
+
+Unlike the ADA in the United States—where enforcement relies on individual lawsuits—the EAA creates a **proactive compliance obligation**. Organisations must demonstrate conformance, not merely respond to complaints.
+
+For any business operating internationally, WCAG compliance is no longer a risk-mitigation strategy. It's a **legal requirement**.
 
 ---
 
@@ -434,6 +476,18 @@ This includes:
 - **Fatigue effects**: End-of-day reduced dexterity
 
 **Dexterity needs vary moment to moment**, even for the same individual. A touch target that works in the morning may fail in the evening when fatigue sets in.
+
+### Cognitive and Neurodivergent Users: The Overlooked Majority
+
+While motor and visual impairments dominate accessibility discussions, an estimated **15-20% of the population identifies as neurodivergent**—including dyslexia, ADHD, autism, dyscalculia, and dyspraxia. WCAG 2.2 includes success criteria addressing cognitive accessibility, but implementation remains rare.
+
+For these users, the barriers are different but equally real:
+- **Unpredictable interfaces** cause anxiety and cognitive overload
+- **Dense layouts** overwhelm attention and working memory
+- **Inconsistent patterns** force relearning on every page
+- **Poor contrast and typography** compound reading difficulties
+
+The Three-Layer Architecture addresses some cognitive concerns implicitly: consistent component patterns reduce cognitive load, clear visual hierarchy aids comprehension, and adequate spacing improves scannability. Layer 3 (content) is where cognitive accessibility matters most—clear labels, predictable state indicators, and meaningful feedback all live in this layer.
 
 ---
 
@@ -743,11 +797,7 @@ Checkout form redesign:    3.6% uplift = €450,000+/year revenue
 
 ### First Impression Window
 
-Research from Microsoft Research shows:
-
-> "There is a 10-20 second window where a user decides whether a website is worth giving a chance or not."
-
-Within **milliseconds**, users form opinions about:
+Research from Lindgaard et al. (2006) demonstrates that users form aesthetic judgments about websites in as little as **50 milliseconds**—a finding later confirmed by Google's own research. Within that fraction of a second, users form opinions about:
 - Trustworthiness
 - Professionalism
 - Quality
@@ -1691,18 +1741,6 @@ Visuals (32px) appear to have 12px gaps.
 Touch targets (44px) are adjacent with no gaps.
 ```
 
-### Why This Is Harmful
-
-1. **Creates overlapping touch targets**: Negative margins cause touch targets to overlap, meaning taps near the boundary activate the wrong element.
-
-2. **Same result as z-index overlap**: Whether you overlap via z-index stacking or negative margins, the outcome is identical—users who need the 44px target area will hit adjacent elements.
-
-3. **Unpredictable hit areas**: The actual tappable region becomes smaller than the visual 44px, defeating the purpose of the Three-Layer Architecture entirely.
-
-4. **"Just a little overlap" is still harmful**: Even 6px of overlap means the effective touch target is reduced by 12px (6px stolen from each side). A 44px target becomes 32px—back to failing WCAG AAA.
-
-**If touch targets need to be adjacent, use grid-aware spacing with `gap: 0`.** Never use negative margins to artificially compress spacing.
-
 ## When Extra Spacing is Actually Good
 
 In many contexts, the extra spacing is beneficial—and trying to eliminate it is solving a problem that doesn't exist:
@@ -1861,7 +1899,29 @@ A common CSS technique uses `::before` or `::after` for touch expansion:
 
 ---
 
-# Part IX: Conclusion and Call to Action
+# Part IX: Limitations and Future Work
+
+No architectural pattern solves everything. The Three-Layer Architecture addresses a specific and critical subset of accessibility concerns—touch target sizing, visual/interactive separation, and focus management—but it is not a complete accessibility solution.
+
+### What This Architecture Does Not Address
+
+- **Content quality**: Layer 3 provides a place for content, but doesn't guarantee that labels are meaningful, error messages are helpful, or language is plain. Content accessibility remains a human responsibility.
+- **Complex interaction patterns**: Multi-step workflows, drag-and-drop interfaces, and real-time collaborative editing present accessibility challenges that go beyond component-level architecture.
+- **Cognitive load in information-dense interfaces**: While consistent component patterns help, the Three-Layer Architecture cannot prevent an overwhelming page layout or a confusing navigation structure. Information architecture is a separate discipline.
+- **Dynamic content and live regions**: Screen reader announcements for toast notifications, loading states, and real-time updates require careful ARIA live region management that sits outside the three-layer model.
+- **Internationalisation edge cases**: Right-to-left layouts, variable text length across languages, and culturally-specific interaction patterns may require layer adjustments not covered here.
+
+### Future Work
+
+- **Extending to complex components**: This paper demonstrates the pattern with a Button. Applying it to date pickers, data tables, comboboxes, and rich text editors presents additional challenges worth exploring.
+- **Cross-framework implementations**: The current implementation uses React and React Aria. Equivalent patterns in Vue, Svelte, and Web Components would broaden adoption.
+- **Automated validation tooling**: A linting rule or build-time check that verifies Layer 1 meets minimum size requirements would catch regressions before they reach production.
+- **WCAG 3.0 alignment**: As the new conformance model matures, the Three-Layer Architecture's relationship to Bronze/Silver/Gold ratings should be evaluated.
+- **User research**: Formal usability testing with motor-impaired, cognitively diverse, and assistive technology users would validate the architecture's real-world effectiveness beyond automated compliance checks.
+
+---
+
+# Part X: Conclusion and Call to Action
 
 ## The Decade-Long Failure
 
@@ -1875,7 +1935,7 @@ Progress has been glacial. At current rates, achieving broad accessibility would
 Meanwhile:
 - **1.3 billion people** live with disabilities
 - **4,000+ lawsuits** filed annually
-- **$490 billion** in spending power ignored
+- **$490 billion** in disposable income among working-age adults with disabilities (American Institutes for Research)
 - Millions experience daily frustration, exclusion, and discrimination
 
 ## The False Choice is Over
@@ -1979,6 +2039,7 @@ The invisible layer does the work. The visible layer gets the attention. Everyon
 - [World Report on Disability](https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability) - WHO
 - [Disability and Health Fact Sheet](https://www.who.int/news-room/fact-sheets/detail/disability-and-health) - WHO
 - [Disability Inclusion Overview](https://www.worldbank.org/en/topic/disability) - World Bank
+- [A Hidden Market: The Purchasing Power of Working-Age Adults With Disabilities](https://www.air.org/resource/report/hidden-market-purchasing-power-working-age-adults-disabilities) - American Institutes for Research
 
 ### Motor Impairment Research
 - [Touch Screen Performance by Individuals With and Without Motor Control Disabilities](https://pmc.ncbi.nlm.nih.gov/articles/PMC3572909/) - PMC
@@ -1993,9 +2054,14 @@ The invisible layer does the work. The visible layer gets the attention. Everyon
 - [Material UI Accessibility](https://github.com/mui/material-ui/issues/21808)
 - [Bootstrap Accessibility](https://getbootstrap.com/docs/5.3/getting-started/accessibility/)
 
+### European Accessibility Act
+- [European Accessibility Act (EAA)](https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en) - European Commission
+- [EN 301 549 Standard](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) - ETSI
+
 ### Design and UX Research
 - [Leaving User Experience To Chance Hurts Companies](https://www.forrester.com/blogs/09-10-15-leaving_user_experience_to_chance_hurts_companies/) - Forrester Research (2009), source of the "400% conversion" statistic
 - [Aesthetic-Usability Effect](https://www.nngroup.com/articles/aesthetic-usability-effect/) - Nielsen Norman Group
+- [Attention web designers: You have 50 milliseconds to make a good first impression!](https://www.tandfonline.com/doi/abs/10.1080/01449290500330448) - Lindgaard et al. (2006)
 - [Impact of UX on Conversion Rates](https://www.conversionry.com.au/blogs/news/the-impact-of-ux-design-on-conversion-rates) - Conversionry
 - [Enhancing Clickable Area Size](https://ishadeed.com/article/clickable-area/) - Ahmad Shadeed
 - [Touch Target Spacing](https://docs.deque.com/devtools-mobile/2024.9.18/en/ios-touch-target-spacing/) - Deque
@@ -2080,9 +2146,28 @@ The invisible layer does the work. The visible layer gets the attention. Everyon
 
 ---
 
+## Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0 | December 2025 | Initial publication |
+| 1.1 | March 2026 | Updated WebAIM Million 2025 figures (framework error rates, ARIA stats, error category percentages). Added European Accessibility Act section. Added WCAG 3.0 overview. Added cognitive accessibility section. Added Limitations & Future Work. Added Glossary. Corrected first impressions research attribution. Clarified 2024 lawsuit scope. Removed non-existent WCAG 2.2.1 reference. |
+
+---
+
+## Acknowledgements
+
+This white paper draws on the work of countless accessibility researchers, advocates, and practitioners whose contributions have shaped the field. In particular:
+
+- The **WebAIM team** for seven years of Million reports that hold the industry accountable
+- **Adobe's React Spectrum team** for pioneering the separation of behaviour, state, and rendering in accessible components
+- The **W3C Web Accessibility Initiative** for maintaining and evolving the WCAG standard
+- The **Tribepad frontend team** for validating the Three-Layer Architecture in production through the Themis component library
+
+---
+
 *This white paper represents research and implementation experience by Mark Basford. The Three-Layer Architecture is implemented in the Themis component library.*
 
-*For implementation examples, see:*
-- *[Button Component](../../frontend/packages/ui/components/themis/elements/Button/Button.tsx)*
-- *[Switch Component](../../frontend/packages/ui/components/themis/elements/Switch/Switch.tsx)*
-- *[The 44px Illusion Blog Post](../../frontend/docs/blogs/FR-0003-the-44px-illusion.md)*
+*For related reading, see:*
+- *[The 44px Illusion](/blog/the-44px-illusion)*
+- *[Why React Aria Won](/blog/why-react-aria-won)*
