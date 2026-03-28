@@ -35,7 +35,7 @@ const links: LinkItem[] = [
   {
     title: 'X (Twitter)',
     description: 'Thoughts on frontend and accessibility',
-    href: 'https://x.com/markbasford',
+    href: 'https://x.com/muggle__magic',
     category: 'Social',
   },
   {
