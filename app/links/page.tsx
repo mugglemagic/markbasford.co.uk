@@ -46,6 +46,13 @@ const links: LinkItem[] = [
     icon: <Image src="/icons/medium.jpg" alt="" aria-hidden="true" width={20} height={20} className="rounded-full" />,
   },
   {
+    title: 'DEV Community',
+    description: 'Articles and discussions on dev.to',
+    href: 'https://dev.to/mugglemagic',
+    category: 'Social',
+    icon: <Image src="/icons/devto.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
+  },
+  {
     title: 'Themis',
     description: 'WCAG 2.2 AAA component library built on React Aria',
     href: 'https://github.com/Tribepad/themis',
