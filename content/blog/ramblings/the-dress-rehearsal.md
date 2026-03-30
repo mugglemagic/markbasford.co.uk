@@ -83,6 +83,8 @@ TypeScript 6 has a similar quality. It can't be the Go compiler. It's still Java
 
 The `--stableTypeOrdering` flag is the most Apollo 10 thing about the whole release. It literally lets you preview how the new compiler will order your types, so you can fix your tests before the switch. It's a dress rehearsal for your dress rehearsal.
 
+Nobody remembers the dress rehearsal. Stafford, Young, and Cernan flew to the moon and back, and most people couldn't name a single one of them. Apollo 11 got the parades. TypeScript 6 will likely go the same way — a version number people skip past on the way to the fast one. But the rehearsal is what made the landing possible.
+
 Apollo 11 launched fifty-nine days after Apollo 10. We don't know exactly when TypeScript 7 will land, but "a few months" is the official word, and the preview is already passing nearly every test in the suite.
 
 The rehearsal window is open. It won't be open forever.
