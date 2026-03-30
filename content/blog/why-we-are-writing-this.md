@@ -19,7 +19,7 @@ We found ourselves thinking about that bridge quite a lot last year.
 
 ## The System That Works
 
-At Tribepad, we have a product that works. Customers use it daily. It's reliable, it's popular, and it does what recruitment software needs to do. We're not writing this because we escaped from something broken.
+We have a product that works. Customers use it daily. It's reliable, it's popular, and it does what recruitment software needs to do. We're not writing this because we escaped from something broken.
 
 But if you've ever maintained software that evolved over a decade, you'll recognise the pattern. Procedural PHP that grew into Laravel. Twig templates sitting next to Smarty, sitting next to React components, sitting next to Vue. Each layer made sense at the time. Each decision was reasonable given what we knew then.
 
