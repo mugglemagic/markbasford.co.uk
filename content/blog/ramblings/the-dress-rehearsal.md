@@ -1,6 +1,6 @@
 ---
 ref: RR-0000
-title: "The Dress Rehearsal"
+title: "Typescript 6: The Dress Rehearsal"
 author: "Mark Basford"
 date: 2026-03-30
 tags: [typescript, typescript-6, migration, compilers, go]

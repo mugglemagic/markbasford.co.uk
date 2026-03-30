@@ -60,7 +60,7 @@ function readMarkdownFiles<T>(dir: string): { slug: string; frontmatter: T; cont
 
     if (entry.isDirectory()) {
       results.push(...readMarkdownFiles<T>(fullPath))
-    } else if (entry.isFile() && entry.name.endsWith('.md') && entry.name !== entry.name.toUpperCase()) {
+    } else if (entry.isFile() && entry.name.endsWith('.md') && entry.name.replace(/\.md$/, '') !== entry.name.replace(/\.md$/, '').toUpperCase()) {
       const raw = fs.readFileSync(fullPath, 'utf-8')
       const { data, content } = matter(raw)
       const slug = entry.name.replace(/\.md$/, '')
