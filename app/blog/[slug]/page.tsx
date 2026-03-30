@@ -23,7 +23,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
   return {
     title: post.frontmatter.title,
-    description: `${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.`,
+    description: post.frontmatter.series
+      ? `${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.`
+      : `${post.frontmatter.estimated_reading_time} read.`,
     alternates: {
       canonical: `/blog/${slug}`,
     },
@@ -54,7 +56,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     headline: post.frontmatter.title,
     author: { '@type': 'Person', name: post.frontmatter.author },
     datePublished: post.frontmatter.date,
-    description: `${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.`,
+    description: post.frontmatter.series
+      ? `${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.`
+      : `${post.frontmatter.estimated_reading_time} read.`,
     url: `https://markbasford.dev/blog/${slug}`,
     keywords: post.frontmatter.tags,
   }

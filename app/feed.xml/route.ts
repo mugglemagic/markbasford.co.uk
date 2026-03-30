@@ -22,7 +22,7 @@ export async function GET() {
       <link>${SITE_URL}/blog/${post.slug}</link>
       <guid isPermaLink="true">${SITE_URL}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.frontmatter.date).toUTCString()}</pubDate>
-      <description>${escapeXml(`${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.`)}</description>
+      <description>${escapeXml(post.frontmatter.series ? `${post.frontmatter.series} — Part ${post.frontmatter.part}. ${post.frontmatter.estimated_reading_time} read.` : `${post.frontmatter.estimated_reading_time} read.`)}</description>
       ${post.frontmatter.tags.map(tag => `<category>${escapeXml(tag)}</category>`).join('\n      ')}
     </item>`
     )

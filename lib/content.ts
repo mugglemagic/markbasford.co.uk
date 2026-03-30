@@ -52,20 +52,24 @@ function normaliseDates(data: Record<string, unknown>): Record<string, unknown> 
 function readMarkdownFiles<T>(dir: string): { slug: string; frontmatter: T; content: string }[] {
   if (!fs.existsSync(dir)) return []
 
-  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'))
+  const results: { slug: string; frontmatter: T; content: string }[] = []
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
 
-  return files.map(filename => {
-    const filePath = path.join(dir, filename)
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    const { data, content } = matter(raw)
-    const slug = filename.replace(/\.md$/, '')
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name)
 
-    return {
-      slug,
-      frontmatter: normaliseDates(data) as T,
-      content,
+    if (entry.isDirectory()) {
+      results.push(...readMarkdownFiles<T>(fullPath))
+    } else if (entry.isFile() && entry.name.endsWith('.md') && entry.name !== entry.name.toUpperCase()) {
+      const raw = fs.readFileSync(fullPath, 'utf-8')
+      const { data, content } = matter(raw)
+      const slug = entry.name.replace(/\.md$/, '')
+
+      results.push({ slug, frontmatter: normaliseDates(data) as T, content })
     }
-  })
+  }
+
+  return results
 }
 
 export async function getAllPosts(): Promise<Post[]> {
