@@ -2,7 +2,7 @@
 ref: DT-0000
 title: "Typescript 6: The Dress Rehearsal"
 author: "Mark Basford"
-date: 2026-03-30
+date: 2026-04-03
 tags: [typescript, typescript-6, migration, compilers, go]
 series: "Duck Typing"
 part: 1

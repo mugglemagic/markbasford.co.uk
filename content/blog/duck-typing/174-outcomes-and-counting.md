@@ -2,7 +2,7 @@
 ref: DT-0002
 title: "174 Outcomes and Counting"
 author: "Mark Basford"
-date: 2026-04-06
+date: 2026-04-10
 tags: [accessibility, wcag, wcag-3, web-standards, conformance]
 series: "Duck Typing"
 part: 3
@@ -23,6 +23,8 @@ The US Navy dropped celestial navigation from its curriculum in 2006. Then, in 2
 
 The stars didn't stop being useful. They just stopped being the only way.
 
+---
+
 ## The sextant we have
 
 WCAG 2.0 was published in 2008. Version 2.1 followed in 2018, and 2.2 in October 2023. For nearly two decades, these guidelines have been the primary instrument for measuring web accessibility. They work. They're well-documented, widely understood by specialists, and referenced by law in the EU, the US, and dozens of other jurisdictions.
@@ -30,6 +32,8 @@ WCAG 2.0 was published in 2008. Version 2.1 followed in 2018, and 2.2 in October
 They're also binary. Each success criterion either passes or fails. You're either Level A, AA, or AAA — with AA being the practical target because almost nobody achieves AAA across an entire site. The system doesn't distinguish between a form that's mildly awkward for keyboard users and one that's completely inoperable. Both fail the same criterion the same way.
 
 And like celestial navigation, WCAG 2.x only measures what it was designed to measure. Cognitive accessibility gets light treatment. Dark patterns aren't addressed. Task completion — whether someone can actually finish what they came to do — isn't directly tested. The instrument is precise within its scope, but the scope has limits.
+
+---
 
 ## What WCAG 3.0 actually is
 
@@ -47,6 +51,8 @@ The changes run deeper than vocabulary.
 
 **Methods become normative.** In WCAG 2.x, techniques were informative — suggestions, not requirements. In WCAG 3.0, methods are mandatory test procedures. This reduces the interpretive ambiguity that has plagued audits for years.
 
+---
+
 ## The direction you can test today
 
 Here's what I find interesting: while WCAG 3.0 is years from completion, several of its confirmed directions are already testable with existing tools. Not the spec itself — but the thinking behind it.
@@ -57,6 +63,8 @@ Here's what I find interesting: while WCAG 3.0 is years from completion, several
 
 **Assertions.** This is the most genuinely novel concept in WCAG 3.0 and has no WCAG 2.x equivalent. Assertions are documented organisational commitments — training records, usability testing reports, accessibility process documentation. They can't substitute for technical requirements, but they're part of Silver and Gold conformance. The W3C's Accessibility Maturity Model, updated September 2025, maps almost directly to what assertions will demand. If you start documenting your training, your testing practices, and your remediation processes now, you're building the evidence base that WCAG 3.0 will formalise.
 
+---
+
 ## The timeline reality
 
 The March 2026 draft is the ninth working draft since the first in January 2021. The W3C's AG Working Group charter runs through April 2026 and is being renewed. The proposed new charter targets a Candidate Recommendation Snapshot by Q4 2027. The AG Working Group co-chair, Rachael Bradley Montgomery, has mentioned late 2029 as a target for the final recommendation — with the caveat that it's a draft schedule subject to revision.
@@ -66,6 +74,8 @@ The W3C's own language is unambiguous: the current spec is an "incomplete draft"
 No accessibility testing tool supports WCAG 3.0 conformance checking. No law references it. WCAG 2.1 Level AA is what the European Accessibility Act requires (via EN 301 549), what the ADA Title II rule mandates, and what courts evaluate against. That won't change for years after 3.0 is finalised — WCAG 2.0 was published in 2008 and the US didn't formally adopt it into Section 508 until 2017.
 
 This is not imminent.
+
+---
 
 ## What to actually do
 
@@ -80,6 +90,8 @@ Start absorbing the philosophical shift now:
 **Severity matters.** The critical error concept in WCAG 3.0 codifies something practitioners have always known: not all failures are equal. A missing skip-to-content link is not the same as a checkout process that traps keyboard users.
 
 And test beyond the element level. Run Sa11y on your content for readability. Wire `@axe-core/playwright` into your user journey tests. Start documenting your accessibility training and usability testing — not because a law requires it yet, but because the evidence you build now is the evidence WCAG 3.0 will formalise.
+
+---
 
 ## The stars are still there
 

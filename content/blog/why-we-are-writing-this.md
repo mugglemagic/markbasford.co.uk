@@ -17,6 +17,8 @@ In 2017, Scotland opened the Queensferry Crossing. Not because the Forth Road Br
 
 We found ourselves thinking about that bridge quite a lot last year.
 
+---
+
 ## The System That Works
 
 We have a product that works. Customers use it daily. It's reliable, it's popular, and it does what recruitment software needs to do. We're not writing this because we escaped from something broken.
@@ -26,6 +28,8 @@ But if you've ever maintained software that evolved over a decade, you'll recogn
 The system isn't bad. It's just... full. Every feature touches three different paradigms. Every change requires archaeology. Bespoke permissions and customer-specific branches that seemed manageable at ten clients become labyrinthine at a hundred. The velocity slows not because anyone made mistakes, but because the structure wasn't built for this scale.
 
 And then there's the thing nobody planned for: we weren't building for a world where AI could help us write, review, and maintain code.
+
+---
 
 ## The Moment Everything Shifted
 
@@ -41,6 +45,8 @@ This wasn't about "vibe coding" - letting AI generate features while developers 
 
 The realisation came gradually, over dog walks and too many coffees: if we structured things deliberately, AI could help us move faster. And if we were going to restructure anyway, why patch the old bridge? Why not build the crossing we actually needed?
 
+---
+
 ## Writing for Two Audiences
 
 We made a decision early: this new architecture would be written for two audiences.
@@ -52,6 +58,8 @@ The second audience is less obvious but equally important: AI assistants.
 Not because we think AI replaces developers. It doesn't. But because AI that understands your codebase is dramatically more useful than AI that's guessing. So we write detailed CLAUDE.md files. We enforce strict typing. We maintain clear module boundaries. We document not just what the code does, but why we chose this approach over alternatives.
 
 It sounds like overhead. In practice, it's an investment that pays back constantly. The AI makes better suggestions. New developers onboard faster. The documentation that helps AI also helps humans. Turns out writing clearly for machines forces you to write clearly, full stop.
+
+---
 
 ## The Four Pillars
 
@@ -71,6 +79,8 @@ We build recruitment software. The point is helping people find jobs. If someone
 
 Four pillars. Not four options where you pick two.
 
+---
+
 ## Why Document This Publicly
 
 The architecture we're building isn't specific to recruitment software. The patterns - multizone micro-frontends, accessible component libraries, event-driven systems, multi-tenant theming - they're applicable anywhere you're building enterprise software that needs to scale.
@@ -83,6 +93,8 @@ It's partly for our team. When someone joins six months from now and wonders why
 
 And it's partly for anyone who cares how their software is built. Not every customer reads technical blogs. But for those who do, for those who want to know that the platform they're trusting with their hiring actually considered accessibility and security and maintainability - here's the evidence.
 
+---
+
 ## What's Coming
 
 This is the first post in an ongoing series. We'll cover architecture decisions like why we split one application into five independent zones. Component library philosophy - building accessible primitives that don't make you choose between delight and inclusion. The event system that decouples everything. How we structured code so AI assistants can genuinely help.
@@ -90,6 +102,8 @@ This is the first post in an ongoing series. We'll cover architecture decisions 
 Each post follows a simple pattern: here's the problem, here's what we considered, here's what we built, here's what we learned. No fluff, no self-congratulation, just reasoning you can evaluate and adapt.
 
 Some of it will be wrong. We'll find better approaches. When we do, we'll document those too. This isn't a monument to our brilliance - it's a journal of decisions made with the best information we had at the time.
+
+---
 
 ## The Bridge We're Building
 

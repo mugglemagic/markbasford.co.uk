@@ -23,6 +23,8 @@ The government knew the air was bad. Everyone knew the air was bad. Harold Macmi
 
 The Act didn't ban coal. It didn't shut down industry. It created smoke control areas and required cleaner fuels. It changed *how* you burned, not *whether* you burned. Black smoke emissions fell 75% within two decades.
 
+---
+
 ## The smog on the web
 
 Ninety-five percent of the top million websites have detectable accessibility failures. Not subtle, edge-case stuff — the basics. Low contrast text. Missing alt attributes on images. Form inputs without labels. Empty links and buttons. No language attribute on the HTML element.
@@ -30,6 +32,8 @@ Ninety-five percent of the top million websites have detectable accessibility fa
 The WebAIM Million report has been running these numbers since 2019, and the same six errors account for 96% of all detected failures. Year after year. The average homepage has 51 distinct accessibility errors. The smog has been visible for a long time.
 
 And like London's air in the early 1950s, most people in the industry have known about it. WCAG 1.0 was published in 1999. Screen readers have existed for decades. The arguments for accessible interfaces are not new, not controversial, and not technically difficult to understand. The problem was never awareness. The problem was that nobody made you do it.
+
+---
 
 ## What actually changed
 
@@ -43,6 +47,8 @@ Meanwhile, federal accessibility lawsuits hit 3,117 in 2025, a 27% increase from
 
 The air quality inspectors have arrived.
 
+---
+
 ## The overlay problem
 
 Here's where the coal export parallel gets uncomfortable.
@@ -54,6 +60,8 @@ In January 2025, the FTC charged accessiBe — the largest overlay provider — 
 Courts have been consistent: 456 lawsuits in the first half of 2025 alone targeted websites using overlay widgets. Twenty-five percent of all 2024 lawsuits explicitly cited the overlays themselves as barriers. Automated tools detect somewhere between 30% and 40% of WCAG violations. An overlay that only addresses what automation can find is, by definition, leaving the majority of issues untouched.
 
 Selling overlays as a compliance solution while the underlying code stays broken is exporting the clean coal. It looks like you're doing something. The air stays dirty.
+
+---
 
 ## The six things
 
@@ -72,6 +80,8 @@ Here's what I find genuinely frustrating about the accessibility compliance conv
 **Semantic HTML.** Use headings in order. Use landmarks. Use native HTML elements before reaching for ARIA — and this matters more than people think. The WebAIM data shows that pages using ARIA have more than twice as many errors as pages without it. The first rule of ARIA is don't use ARIA when native HTML will do the job.
 
 None of this requires specialist knowledge. None of it requires expensive tooling. None of it slows down development in any meaningful way once it's part of how you work. The Clean Air Act didn't ask people to stop heating their homes. It asked them to burn cleaner fuel.
+
+---
 
 ## The thing about clean air
 
