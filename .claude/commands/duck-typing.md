@@ -1,12 +1,12 @@
-# /ramblings — Write a Ramblings of a Rambler blog post
+# /duck-typing — Write a Duck Typing blog post
 
-Write a blog post for the "Ramblings of a Rambler" series. The topic is: $ARGUMENTS
+Write a blog post for the "Duck Typing" series. The topic is: $ARGUMENTS
 
 ## Before You Start
 
-Read the writing style guide at `content/blog/ramblings/STYLE.md`. Every decision you make must align with it.
+Read the writing style guide at `content/blog/duck-typing/STYLE.md`. Every decision you make must align with it.
 
-Read all existing posts in `content/blog/ramblings/` to understand the series context, determine the next `RR-XXXX` ref number, and the next part number.
+Read all existing posts in `content/blog/duck-typing/` to understand the series context, determine the next `DT-XXXX` ref number, and the next part number.
 
 ## Phase 1 — Research (Plan Mode)
 
@@ -44,7 +44,7 @@ Present a structured summary:
 
 Once approved, write the full blog post.
 
-- Create the file at `content/blog/ramblings/{slug}.md`
+- Create the file at `content/blog/duck-typing/{slug}.md`
 - Follow the YAML frontmatter convention from STYLE.md exactly
 - Set `published: false`
 - Calculate and set accurate `word_count` and `estimated_reading_time` (assume ~200 words per minute)
@@ -65,4 +65,4 @@ Incorporate user feedback. This may take multiple rounds. For each round:
 
 When the user is satisfied with the draft, remind them:
 
-> Ready for final review? Run `/ramblings-review` to fact-check and verify style compliance.
+> Ready for final review? Run `/duck-typing-review` to fact-check and verify style compliance.

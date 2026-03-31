@@ -1,4 +1,4 @@
-# Ramblings of a Rambler — Writing Style
+# Duck Typing — Writing Style
 
 ## Voice
 
@@ -62,12 +62,12 @@ Every post should feature at least one substantial analogy. These are the backbo
 
 ```yaml
 ---
-ref: RR-XXXX          # Sequential, starting at RR-0000
+ref: DT-XXXX          # Sequential, starting at DT-0000
 title: "Title Here"
 author: "Mark Basford"
 date: YYYY-MM-DD
 tags: [relevant, specific, tags]
-series: "Ramblings of a Rambler"
+series: "Duck Typing"
 part: N                # Sequential within the series
 word_count: NNNN
 published: false       # Always false on creation

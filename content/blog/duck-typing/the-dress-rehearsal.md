@@ -1,10 +1,10 @@
 ---
-ref: RR-0000
+ref: DT-0000
 title: "Typescript 6: The Dress Rehearsal"
 author: "Mark Basford"
 date: 2026-03-30
 tags: [typescript, typescript-6, migration, compilers, go]
-series: "Ramblings of a Rambler"
+series: "Duck Typing"
 part: 1
 word_count: 1487
 published: true

@@ -1,12 +1,12 @@
-# /ramblings-review — Review a Ramblings of a Rambler blog post
+# /duck-typing-review — Review a Duck Typing blog post
 
-Comprehensively review a blog post from the "Ramblings of a Rambler" series.
+Comprehensively review a blog post from the "Duck Typing" series.
 
-If an argument is provided (`$ARGUMENTS`), treat it as the slug of the post to review. Otherwise, review the most recently modified `.md` file in `content/blog/ramblings/`.
+If an argument is provided (`$ARGUMENTS`), treat it as the slug of the post to review. Otherwise, review the most recently modified `.md` file in `content/blog/duck-typing/`.
 
 ## Setup
 
-1. Read the writing style guide at `content/blog/ramblings/STYLE.md`
+1. Read the writing style guide at `content/blog/duck-typing/STYLE.md`
 2. Read the blog post to review
 
 ## Review Process
@@ -59,9 +59,9 @@ For any technical claims, code examples, or references to specs/tools/libraries:
 
 ### 4. Frontmatter Validation
 
-- [ ] `ref` follows `RR-XXXX` pattern
+- [ ] `ref` follows `DT-XXXX` pattern
 - [ ] `ref` is sequential and not a duplicate of existing posts
-- [ ] `series` is exactly `"Ramblings of a Rambler"`
+- [ ] `series` is exactly `"Duck Typing"`
 - [ ] `author` is `"Mark Basford"`
 - [ ] `published` is `false`
 - [ ] `word_count` is accurate (count actual words in the post body)
@@ -83,7 +83,7 @@ For any technical claims, code examples, or references to specs/tools/libraries:
 Present the review as a structured report:
 
 ```
-## Ramblings Review: "{post title}"
+## Duck Typing Review: "{post title}"
 
 ### Fact Check
 [Findings with sources]
