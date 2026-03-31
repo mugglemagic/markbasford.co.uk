@@ -125,6 +125,48 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Substack CTA */}
+      <section aria-labelledby="substack-heading" className="mb-16">
+        <a
+          href="https://mugglemagic.substack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card-hover flex items-center gap-4 rounded-lg border p-5"
+          style={{
+            borderColor: 'var(--border)',
+            backgroundColor: 'var(--content-background)',
+          }}
+        >
+          <Image
+            src="/icons/substack.webp"
+            alt=""
+            aria-hidden="true"
+            width={36}
+            height={36}
+            className="shrink-0 rounded"
+          />
+          <div className="flex-1">
+            <h2
+              id="substack-heading"
+              className="mb-0.5 text-sm font-semibold"
+              style={{ color: 'var(--content-foreground)' }}
+            >
+              Subscribe on Substack
+            </h2>
+            <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
+              Accessibility, performance, and architecture — delivered to your inbox.
+            </p>
+          </div>
+          <span
+            className="shrink-0 text-sm font-medium"
+            style={{ color: 'var(--text-link)' }}
+            aria-hidden="true"
+          >
+            Subscribe &#8599;
+          </span>
+        </a>
+      </section>
+
       {/* Featured Paper */}
       <section aria-labelledby="featured-paper-heading">
         <h2

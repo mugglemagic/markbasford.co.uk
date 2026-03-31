@@ -53,6 +53,13 @@ const links: LinkItem[] = [
     icon: <Image src="/icons/devto.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
   },
   {
+    title: 'Substack',
+    description: 'Subscribe to new posts on Substack',
+    href: 'https://mugglemagic.substack.com',
+    category: 'Social',
+    icon: <Image src="/icons/substack.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
+  },
+  {
     title: 'Themis',
     description: 'WCAG 2.2 AAA component library built on React Aria',
     href: 'https://github.com/Tribepad/themis',
