@@ -1,4 +1,11 @@
-# /duck-typing — Write a Duck Typing blog post
+---
+name: duck-typing
+description: Write a blog post for the "Duck Typing" series. Use when the user wants to write a new blog post, provides a topic for a Duck Typing post, or references the series by name.
+argument-hint: "<topic>"
+effort: high
+---
+
+# Write a Duck Typing blog post
 
 Write a blog post for the "Duck Typing" series. The topic is: $ARGUMENTS
 

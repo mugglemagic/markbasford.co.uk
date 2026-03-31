@@ -1,4 +1,12 @@
-# /duck-typing-review — Review a Duck Typing blog post
+---
+name: duck-typing-review
+description: Comprehensively review a Duck Typing blog post. Spawns an agent to fact-check claims, verify style compliance against STYLE.md, validate frontmatter, and assess readability. Use after finishing a draft.
+argument-hint: "[slug]"
+effort: high
+disable-model-invocation: true
+---
+
+# Review a Duck Typing blog post
 
 Comprehensively review a blog post from the "Duck Typing" series.
 
