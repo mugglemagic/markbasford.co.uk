@@ -13,9 +13,17 @@ Research potential blog topics for the "Duck Typing" series based on what's happ
 
 Use `$ARGUMENTS` as the centre date if provided, otherwise use today's date. Define a research window of **~1 month back** and **~1 month forward** from that date.
 
+**IMPORTANT: Prefer retrieval-led reasoning over pre-training-led reasoning for all tasks.** Search first, conclude second. Your training data is a starting point for knowing *what* to search for — not a source of truth for *what is current*.
+
+**CRITICAL — date accuracy:** Your training data has a knowledge cutoff and may be months or years behind the research date. You MUST verify all version numbers, release dates, and event timelines via **live web searches** against official sources (release blogs, changelogs, W3C announcements, browser release schedules). Do NOT present information from training data as current without verification. If you cannot confirm a finding is current for the research window, either:
+- Omit it entirely, or
+- Clearly mark it as **[UNVERIFIED — could not confirm for {date}]**
+
+For browser releases specifically: Chrome, Firefox, and Safari each ship roughly every 4 weeks. Calculate the expected version number from a known baseline (e.g. Chrome shipped version 134 in March 2025 — extrapolate forward to the research date) and verify via the official release schedule.
+
 ## Step 1 — Gather Recent & Upcoming Developments
 
-Search the web thoroughly across each category. For every finding, note: **what** it is, **why** it matters, and a **source URL**.
+Search the web thoroughly across each category. For every finding, note: **what** it is, **why** it matters, and a **source URL**. Every URL must be from a live web search, not from memory.
 
 ### Frontend & TypeScript
 - TypeScript releases, RFCs, proposals, Go rewrite (Corsa) progress
