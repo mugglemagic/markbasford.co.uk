@@ -1,0 +1,29 @@
+graph TD
+    subgraph Edge["Edge Case Thinking"]
+        direction TB
+        E1["Design for the happy path"]
+        E2["Handle exceptions later"]
+        E3["Label unusual scenarios<br/>'edge cases'"]
+        E4["Deprioritise or accept<br/>as known limitations"]
+        E1 --> E2 --> E3 --> E4
+    end
+
+    subgraph Stress["Stress Case Thinking"]
+        direction TB
+        S1["Design for the hardest scenario"]
+        S2["If it works here,<br/>it works everywhere"]
+        S3["Label unusual scenarios<br/>'stress cases'"]
+        S4["Use them to test the<br/>strength of the design"]
+        S1 --> S2 --> S3 --> S4
+    end
+
+    style E1 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style E2 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style E3 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style E4 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style S1 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style S2 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style S3 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style S4 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style Edge fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e
+    style Stress fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e

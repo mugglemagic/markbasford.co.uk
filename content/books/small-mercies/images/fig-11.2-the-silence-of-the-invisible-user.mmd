@@ -1,0 +1,15 @@
+graph TD
+    A["Product assumes<br/>happy path"] --> B["Stress case user<br/>encounters a problem"]
+    B --> C{"Does the user<br/>report it?"}
+    C -->|"Usually not"| D["User leaves silently<br/>or endures silently"]
+    C -->|"Rarely"| E["Bug report or<br/>support ticket"]
+    D --> F["Product never learns<br/><em>The failure is invisible<br/>to the team</em>"]
+    E --> G["Product learns<br/>and improves"]
+
+    style A fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e
+    style B fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style C fill:#fff,stroke:#60A5FA,color:#1a1a2e
+    style D fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style E fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style F fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style G fill:#ecfdf5,stroke:#059669,color:#1a1a2e

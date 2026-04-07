@@ -1,0 +1,25 @@
+graph TD
+    subgraph First["First Visit — Orientation"]
+        direction TB
+        F1["Reduce overwhelm<br/><em>Show one clear next step</em>"]
+        F2["Introduce vocabulary<br/><em>Name things the user<br/>will need to know</em>"]
+        F3["Build confidence<br/><em>Quick win within<br/>first 60 seconds</em>"]
+        F1 --> F2 --> F3
+    end
+
+    subgraph Return["Return Visit — Recognition"]
+        direction TB
+        R1["Acknowledge the user<br/><em>Name, time of day,<br/>context</em>"]
+        R2["Show what changed<br/><em>Updates, comments,<br/>activity since last visit</em>"]
+        R3["Resume context<br/><em>Where they left off,<br/>in-progress work</em>"]
+        R1 --> R2 --> R3
+    end
+
+    style F1 fill:#f0f9ff,stroke:#0284c7,color:#1a1a2e
+    style F2 fill:#f0f9ff,stroke:#0284c7,color:#1a1a2e
+    style F3 fill:#f0f9ff,stroke:#0284c7,color:#1a1a2e
+    style R1 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style R2 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style R3 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style First fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e
+    style Return fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e

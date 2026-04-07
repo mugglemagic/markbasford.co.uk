@@ -1,0 +1,19 @@
+graph TD
+    E["Error occurs"] --> FTA["Face-threatening act"]
+    FTA --> PF["Positive face threatened<br/><em>'You got it wrong'</em>"]
+    FTA --> NF["Negative face threatened<br/><em>'Now redo it'</em>"]
+
+    PF --> S1["Blunt<br/><em>'INVALID INPUT'</em>"]
+    PF --> S2["Positive politeness<br/><em>'Almost there — just needs<br/>a valid email'</em>"]
+
+    NF --> S3["Blunt<br/><em>'Required field'</em>"]
+    NF --> S4["Negative politeness<br/><em>'You can change this<br/>later if you prefer'</em>"]
+
+    style E fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e
+    style FTA fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style PF fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style NF fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style S1 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style S2 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style S3 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style S4 fill:#ecfdf5,stroke:#059669,color:#1a1a2e

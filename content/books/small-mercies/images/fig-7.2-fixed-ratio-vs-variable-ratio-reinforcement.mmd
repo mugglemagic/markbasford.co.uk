@@ -1,0 +1,29 @@
+graph TD
+    subgraph Fixed["Fixed Ratio<br/><em>Progress bar, milestone, checklist</em>"]
+        direction TB
+        F1["User knows the goal"]
+        F2["User can see progress"]
+        F3["Reward is predictable"]
+        F4["Supports competence ✅"]
+        F1 --> F2 --> F3 --> F4
+    end
+
+    subgraph Variable["Variable Ratio<br/><em>Slot machine, feed refresh, loot box</em>"]
+        direction TB
+        V1["User doesn't know the goal"]
+        V2["Progress is invisible"]
+        V3["Reward is unpredictable"]
+        V4["Exploits uncertainty ⚠️"]
+        V1 --> V2 --> V3 --> V4
+    end
+
+    style F1 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style F2 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style F3 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style F4 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style V1 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style V2 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style V3 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style V4 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style Fixed fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e
+    style Variable fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e

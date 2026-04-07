@@ -1,0 +1,15 @@
+graph TD
+    A["Microinteraction<br/><em>Toggle, confirmation,<br/>loading state</em>"] --> B{"Emotional<br/>response"}
+    B -->|Positive| C["Product feels<br/>trustworthy, polished,<br/>reliable"]
+    B -->|Negative| D["Product feels<br/>broken, careless,<br/>untrustworthy"]
+    C --> E["User interprets<br/>ambiguous moments<br/>charitably"]
+    D --> F["User looks for<br/>more reasons<br/>to leave"]
+    E -->|"Reinforces"| C
+    F -->|"Reinforces"| D
+
+    style A fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e
+    style B fill:#fff,stroke:#60A5FA,color:#1a1a2e
+    style C fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style D fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style E fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style F fill:#fef2f2,stroke:#dc2626,color:#1a1a2e

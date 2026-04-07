@@ -1,0 +1,37 @@
+graph LR
+    subgraph Good["Good Craft — serves the user"]
+        direction TB
+        G1["Welcome back message<br/><em>Ch 03</em>"]
+        G2["Respectful microcopy<br/><em>Ch 06</em>"]
+        G3["Progress celebration<br/><em>Ch 07</em>"]
+        G4["Reduced friction<br/><em>passim</em>"]
+        G5["Clear feedback<br/><em>Ch 05</em>"]
+    end
+
+    subgraph Dark["Dark Version — serves the business"]
+        direction TB
+        D1["Guilt-trip re-engagement<br/><em>'Your streak is dying!'</em>"]
+        D2["Confirmshaming<br/><em>'No thanks, I hate<br/>saving money'</em>"]
+        D3["Manufactured urgency<br/><em>'Only 2 left!'</em>"]
+        D4["Roach motel<br/><em>Easy sign-up,<br/>impossible cancellation</em>"]
+        D5["Misdirection<br/><em>Visual emphasis on<br/>the option you don't want</em>"]
+    end
+
+    G1 -.-> D1
+    G2 -.-> D2
+    G3 -.-> D3
+    G4 -.-> D4
+    G5 -.-> D5
+
+    style G1 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style G2 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style G3 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style G4 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style G5 fill:#ecfdf5,stroke:#059669,color:#1a1a2e
+    style D1 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style D2 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style D3 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style D4 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style D5 fill:#fef2f2,stroke:#dc2626,color:#1a1a2e
+    style Good fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e
+    style Dark fill:#fafafe,stroke:#e5e7eb,color:#1a1a2e
