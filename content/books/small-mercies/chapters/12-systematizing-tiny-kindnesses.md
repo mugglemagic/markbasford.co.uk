@@ -129,6 +129,6 @@ The final chapter returns to where we started — to the film, the philosophy, a
 
 [4] GOV.UK Design System updated all 44 components for WCAG 2.2 in 2024. [GOV.UK Design System — Live Reassessment](https://www.gov.uk/service-standard-reports/gov-uk-design-system-live-reassessment).
 
-[5] GOV.UK Design System: pages download ~2x faster, 52 services built in weeks during pandemic. [GDS Blog — The GOV.UK Design System Is Now Live](https://gds.blog.gov.uk/2022/03/31/the-gov-uk-design-system-is-now-live/).
+[5] GOV.UK Design System: pages download approximately 2x faster, 52 services built in weeks during pandemic. [GDS Blog — The GOV.UK Design System Is Now Live](https://gds.blog.gov.uk/2022/03/31/the-gov-uk-design-system-is-now-live/).
 
 [6] Fogg, B. J. Behavior Model: Motivation + Ability + Prompt. [behaviormodel.org](https://www.behaviormodel.org/). Over 1,900 academic publications reference the model.

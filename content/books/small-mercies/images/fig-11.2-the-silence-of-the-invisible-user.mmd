@@ -1,9 +1,9 @@
-graph TD
+graph LR
     A["Product assumes<br/>happy path"] --> B["Stress case user<br/>encounters a problem"]
     B --> C{"Does the user<br/>report it?"}
     C -->|"Usually not"| D["User leaves silently<br/>or endures silently"]
     C -->|"Rarely"| E["Bug report or<br/>support ticket"]
-    D --> F["Product never learns<br/><em>The failure is invisible<br/>to the team</em>"]
+    D --> F["Product never learns<br/><em>The failure is invisible</em>"]
     E --> G["Product learns<br/>and improves"]
 
     style A fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e

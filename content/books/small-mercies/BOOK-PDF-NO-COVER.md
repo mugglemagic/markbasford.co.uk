@@ -1,44 +1,61 @@
 ---
-title: "Small Mercies: Microinteractions, Perspective, and the Frontend Craft of Making People Feel Good"
-author: "Mark Basford"
-started: 2026-04-06
-status: draft
-theme: "Small moments — in life and in interfaces — shape how a day feels; good products treat those moments with care, clarity, and joy."
-lessons:
-  - "Microinteractions are the product — they define how something feels, not just what it does"
-  - "The same attentiveness that makes a good neighbour makes a good interface"
-  - "Systematising small kindnesses is how craft scales without losing its soul"
-tags: [frontend, microinteractions, ux, design, craft, accessibility, motion, microcopy]
+pdf_options:
+  format: A5
+  margin: 18mm 15mm 22mm 15mm
+  displayHeaderFooter: true
+  headerTemplate: '<span></span>'
+  footerTemplate: '<div style="width: 100%; text-align: center; font-size: 9pt; font-family: monospace; color: #999;"><span class="pageNumber"></span></div>'
+stylesheet:
+  - pdf-styles.css
 ---
 
-# Small Mercies
 
-**Microinteractions, Perspective, and the Frontend Craft of Making People Feel Good**
+
+<div class="copyright" style="text-align: center; font-size: 8pt; color: #666; margin-top: 5cm; line-height: 2.2; page-break-after: always;">
+
+**Small Mercies**
+
+Microinteractions, Perspective, and the Frontend Craft of Making People Feel Good
 
 *Mark Basford*
 
 ---
 
-## Table of Contents
+Copyright &copy; 2026 Mark Basford. All rights reserved.
 
-1. [About Time and the Practice of Noticing](#about-time-and-the-practice-of-noticing)
-2. [The Small Stuff Is the Product](#the-small-stuff-is-the-product)
-3. [Hello Again: Designing the Welcome Back Moment](#hello-again-designing-the-welcome-back-moment)
-4. [First Impressions in Milliseconds](#first-impressions-in-milliseconds)
-5. [Motion with Manners](#motion-with-manners)
-6. [Language That Respects People](#language-that-respects-people)
-7. [Gamification, Wins, and Why Small Success Matters](#gamification-wins-and-why-small-success-matters)
-8. [The Other Side of Craft](#the-other-side-of-craft)
-9. [Waiting, Loading, and Anxiety](#waiting-loading-and-anxiety)
-10. [Designing for Mistakes and Bad Days](#designing-for-mistakes-and-bad-days)
-11. [The Invisible User](#the-invisible-user)
-12. [Systematizing Tiny Kindnesses](#systematizing-tiny-kindnesses)
-13. [The Present-Tense Interface](#the-present-tense-interface)
+No part of this publication may be reproduced, distributed, or transmitted
+in any form or by any means without the prior written permission of the author,
+except for brief quotations in reviews and certain noncommercial uses
+permitted by copyright law.
+
+First edition, 2026.
+
+Published by the author.
+
+</div>
+
+## Contents
+
+1. About Time and the Practice of Noticing
+2. The Small Stuff Is the Product
+3. Hello Again: Designing the Welcome Back Moment
+4. First Impressions in Milliseconds
+5. Motion with Manners
+6. Language That Respects People
+7. Gamification, Wins, and Why Small Success Matters
+8. The Other Side of Craft
+9. Waiting, Loading, and Anxiety
+10. Designing for Mistakes and Bad Days
+11. The Invisible User
+12. Systematizing Tiny Kindnesses
+13. The Present-Tense Interface
 
 ---
 
 
-# About Time and the Practice of Noticing
+
+
+# 01 — About Time and the Practice of Noticing
 
 ![A parent and child walking along a beach at golden hour, seen from behind. Soft light, unhurried, an ordinary evening where nothing happens but everything feels right.](images/chapters/01.png)
 
@@ -175,7 +192,7 @@ The rest of this book is about what to pay attention to, and why it matters.
 ---
 
 
-# The Small Stuff Is the Product
+# 02 — The Small Stuff Is the Product
 
 ![A close-up of a hand flicking a small physical toggle switch on the side of a device. Shallow depth of field, the switch mid-action, focused on the tiny mechanism.](images/chapters/02.png)
 
@@ -374,7 +391,7 @@ Most products waste it.
 ---
 
 
-# Hello Again: Designing the Welcome Back Moment
+# 03 — Hello Again: Designing the Welcome Back Moment
 
 ![A warm pub interior seen from the doorway — low lighting, a bar in the background, dog leads hanging from a table leg. The feeling of arriving somewhere that knows you.](images/chapters/03.png)
 
@@ -519,7 +536,7 @@ It costs nothing. It changes everything.
 ---
 
 
-# First Impressions in Milliseconds
+# 04 — First Impressions in Milliseconds
 
 ![The front door of a holiday cottage, slightly ajar, warm light spilling out into the evening. Welcome treats visible on a counter just inside — the moment of first impression.](images/chapters/04.png)
 
@@ -640,7 +657,7 @@ The front door gets you inside. What keeps you there — the motion, the languag
 ---
 
 
-# Motion with Manners
+# 05 — Motion with Manners
 
 ![A kitchen drawer caught mid-close by its soft-close mechanism. Nearly shut, that last centimetre of gentle deceleration. Clean, modern kitchen, shallow depth of field.](images/chapters/05.png)
 
@@ -761,7 +778,7 @@ That's manners. The next chapter applies the same principle to the cheapest, mos
 ---
 
 
-# Language That Respects People
+# 06 — Language That Respects People
 
 ![A close-up of a screen showing a form field with a red error highlight but no explanation — just the red outline and a blinking cursor. Frustration implied by the emptiness of the feedback.](images/chapters/06.png)
 
@@ -914,7 +931,7 @@ The soft-close drawer from the last chapter takes a physical moment and makes it
 ---
 
 
-# Gamification, Wins, and Why Small Success Matters
+# 07 — Gamification, Wins, and Why Small Success Matters
 
 ![A phone screen showing an electric driving percentage — a simple number like 78 percent glowing on a dark background. The satisfaction of a number you are proud of.](images/chapters/07.png)
 
@@ -1047,7 +1064,7 @@ The next chapter asks what happens when that care is faked — when the same mec
 ---
 
 
-# The Other Side of Craft
+# 08 — The Other Side of Craft
 
 ![A screen showing a cancel button in small grey text next to a large, bright Keep My Subscription button. The visual hierarchy is clearly manipulative, lit only by the screen glow.](images/chapters/08.png)
 
@@ -1188,7 +1205,7 @@ The next chapter moves from how products communicate to how they wait — and wh
 ---
 
 
-# Waiting, Loading, and Anxiety
+# 09 — Waiting, Loading, and Anxiety
 
 ![An airport departures board with one row showing no status — blank where the other rows say On Time or Boarding. The anxiety of no information, warm terminal lighting.](images/chapters/09.png)
 
@@ -1319,7 +1336,7 @@ The next chapter is about what happens when the wait ends badly — when somethi
 ---
 
 
-# Designing for Mistakes and Bad Days
+# 10 — Designing for Mistakes and Bad Days
 
 ![A pencil lying on paper with eraser shavings nearby — evidence of correction, of trying and adjusting. Warm natural light, overhead shot. The eraser is the subject.](images/chapters/10.png)
 
@@ -1448,7 +1465,7 @@ The next chapter is about the users who never report their mistakes — who neve
 ---
 
 
-# The Invisible User
+# 11 — The Invisible User
 
 ![An empty chair at a desk with a computer screen glowing in the background, slightly out of focus. Someone who should be here but is not. Quiet, still, the absent user.](images/chapters/11.png)
 
@@ -1587,7 +1604,7 @@ That's where the invisible user becomes visible.
 ---
 
 
-# Systematizing Tiny Kindnesses
+# 12 — Systematizing Tiny Kindnesses
 
 ![A professional kitchen prep list pinned to a wall — handwritten, checked off, slightly worn. Stainless steel surfaces in the background. The system that survives the individual.](images/chapters/12.png)
 
@@ -1718,7 +1735,7 @@ The final chapter returns to where we started — to the film, the philosophy, a
 ---
 
 
-# The Present-Tense Interface
+# 13 — The Present-Tense Interface
 
 ![A parent and child walking along a beach at early morning — the same composition as chapter one but the light has shifted. Full circle. A new day, the same attentiveness.](images/chapters/13.png)
 

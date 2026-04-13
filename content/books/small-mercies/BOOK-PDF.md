@@ -1,7 +1,7 @@
 ---
 pdf_options:
-  format: A4
-  margin: 25mm 20mm 30mm 20mm
+  format: A5
+  margin: 18mm 15mm 22mm 15mm
   displayHeaderFooter: true
   headerTemplate: '<span></span>'
   footerTemplate: '<div style="width: 100%; text-align: center; font-size: 9pt; font-family: monospace; color: #999;"><span class="pageNumber"></span></div>'
@@ -13,7 +13,7 @@ stylesheet:
   <img src="images/cover/cover.png" style="max-width: 100%; max-height: 100vh; margin: 0 auto;" />
 </div>
 
-<div class="copyright" style="text-align: center; font-size: 9pt; color: #666; margin-top: 8cm; line-height: 2.2; page-break-after: always;">
+<div class="copyright" style="text-align: center; font-size: 8pt; color: #666; margin-top: 5cm; line-height: 2.2; page-break-after: always;">
 
 **Small Mercies**
 
@@ -53,6 +53,8 @@ Published by the author.
 13. The Present-Tense Interface
 
 ---
+
+
 
 
 # 01 — About Time and the Practice of Noticing
@@ -767,7 +769,7 @@ That's manners. The next chapter applies the same principle to the cheapest, mos
 
 [3] Apple Human Interface Guidelines on motion: ideal duration 100–500ms, building mental models through spatial behaviour. [Apple Developer — Motion](https://developer.apple.com/design/human-interface-guidelines/motion).
 
-[4] Vestibular dysfunction prevalence: ~35% of adults aged 40+ in the US (~69 million Americans). [PMC — Vestibular Dysfunction: Prevalence, Impact and Need for Targeted Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4069154/).
+[4] Vestibular dysfunction prevalence: approximately 35% of adults aged 40+ in the US (roughly 69 million Americans). [PMC — Vestibular Dysfunction: Prevalence, Impact and Need for Targeted Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4069154/).
 
 [5] 35%+ of participants with vestibular disorders had difficulty with motion-heavy websites. [A List Apart — Designing Safer Web Animation for Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/).
 
@@ -1728,7 +1730,7 @@ The final chapter returns to where we started — to the film, the philosophy, a
 
 [4] GOV.UK Design System updated all 44 components for WCAG 2.2 in 2024. [GOV.UK Design System — Live Reassessment](https://www.gov.uk/service-standard-reports/gov-uk-design-system-live-reassessment).
 
-[5] GOV.UK Design System: pages download ~2x faster, 52 services built in weeks during pandemic. [GDS Blog — The GOV.UK Design System Is Now Live](https://gds.blog.gov.uk/2022/03/31/the-gov-uk-design-system-is-now-live/).
+[5] GOV.UK Design System: pages download approximately 2x faster, 52 services built in weeks during pandemic. [GDS Blog — The GOV.UK Design System Is Now Live](https://gds.blog.gov.uk/2022/03/31/the-gov-uk-design-system-is-now-live/).
 
 [6] Fogg, B. J. Behavior Model: Motivation + Ability + Prompt. [behaviormodel.org](https://www.behaviormodel.org/). Over 1,900 academic publications reference the model.
 

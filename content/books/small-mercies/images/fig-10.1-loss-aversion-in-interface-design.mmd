@@ -1,10 +1,10 @@
-graph TD
-    A["User creates something<br/><em>Document, message,<br/>configuration</em>"] --> B["Endowment effect<br/><em>They now value it<br/>more than before</em>"]
-    B --> C{"Mistake happens"}
-    C -->|"No recovery"| D["Loss experienced<br/><em>Pain ~2x the pleasure<br/>of creating it</em>"]
-    C -->|"Undo / auto-save"| E["Mistake recovered<br/><em>Loss prevented<br/>Trust maintained</em>"]
-    D --> F["Learned helplessness<br/><em>User becomes cautious,<br/>disengaged, or leaves</em>"]
-    E --> G["Psychological safety<br/><em>User explores more<br/>confidently</em>"]
+graph LR
+    A["User creates<br/>something"] --> B["Endowment<br/>effect"]
+    B --> C{"Mistake"}
+    C -->|"No recovery"| D["Loss felt<br/><em>Pain approximately 2x<br/>the pleasure</em>"]
+    C -->|"Undo / auto-save"| E["Recovered<br/><em>Loss prevented<br/>Trust maintained</em>"]
+    D --> F["Learned<br/>helplessness"]
+    E --> G["Psychological<br/>safety"]
 
     style A fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e
     style B fill:#eff6ff,stroke:#60A5FA,color:#1a1a2e

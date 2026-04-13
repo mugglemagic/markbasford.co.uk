@@ -34,3 +34,4 @@ pnpm-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 content/books/small-mercies/BOOK-PDF.pdf
+content/books/small-mercies/BOOK-PDF-NO-COVER.pdf

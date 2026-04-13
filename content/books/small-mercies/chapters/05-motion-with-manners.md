@@ -115,7 +115,7 @@ That's manners. The next chapter applies the same principle to the cheapest, mos
 
 [3] Apple Human Interface Guidelines on motion: ideal duration 100–500ms, building mental models through spatial behaviour. [Apple Developer — Motion](https://developer.apple.com/design/human-interface-guidelines/motion).
 
-[4] Vestibular dysfunction prevalence: ~35% of adults aged 40+ in the US (~69 million Americans). [PMC — Vestibular Dysfunction: Prevalence, Impact and Need for Targeted Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4069154/).
+[4] Vestibular dysfunction prevalence: approximately 35% of adults aged 40+ in the US (roughly 69 million Americans). [PMC — Vestibular Dysfunction: Prevalence, Impact and Need for Targeted Treatment](https://pmc.ncbi.nlm.nih.gov/articles/PMC4069154/).
 
 [5] 35%+ of participants with vestibular disorders had difficulty with motion-heavy websites. [A List Apart — Designing Safer Web Animation for Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/).
 
