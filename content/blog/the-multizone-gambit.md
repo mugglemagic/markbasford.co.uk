@@ -7,7 +7,7 @@ tags: [architecture, scalability, performance, maintainability, turborepo, nextj
 series: "Architecting for Everything"
 part: 2
 word_count: 1347
-published: false
+published: true
 estimated_reading_time: "9 min"
 research_sources:
   - 0002-frontend-module-structure.md

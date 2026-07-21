@@ -7,7 +7,7 @@ tags: [architecture, accessibility, react-aria, components, performance]
 series: "Architecting for Everything"
 part: 3
 word_count: 1438
-published: false
+published: true
 estimated_reading_time: "10 min"
 research_sources:
   - 0003-component-library-hybrid-approach.md

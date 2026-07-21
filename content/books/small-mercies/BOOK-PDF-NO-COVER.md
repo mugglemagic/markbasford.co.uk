@@ -65,7 +65,7 @@ In 2013, he made *About Time*. It's one of my favourite films. My wife's too —
 
 *About Time* is, on the surface, a romantic comedy about a man who can travel back in time. Tim, played by Domhnall Gleeson, discovers this ability on his twenty-first birthday when his father — played by Bill Nighy with exactly the right amount of gentle eccentricity — takes him into a cupboard and explains the family secret. The men in the family can revisit any moment they've already lived.
 
-Tim does what anyone would do. He goes back and fixes things. An awkward first meeting with the woman he likes. A joke that landed badly. A New Year's Eve party where he was too shy to talk to anyone. He uses time travel as an undo button for social embarrassment, and for a while, it works.
+Tim does what anyone would do. He goes back and fixes things. A sister whose life is going sideways. A girl he likes, who he can't quite impress. A friend's play on opening night, with an actor blanking on his lines. He uses time travel as an undo button for the moments that didn't go the way they should have, and for a while, it works.
 
 But the film isn't really about fixing things. The fixing is the setup. The real story is about what happens when Tim stops.
 

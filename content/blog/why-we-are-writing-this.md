@@ -7,7 +7,7 @@ tags: [architecture, accessibility, enterprise, ai-assisted-development]
 series: "Architecting for Everything"
 part: 1
 word_count: 1524
-published: false
+published: true
 estimated_reading_time: "10 min"
 ---
 
