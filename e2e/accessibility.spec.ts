@@ -100,4 +100,71 @@ test.describe('Accessibility', () => {
       expect(rel, `External link ${i} missing noopener`).toContain('noopener')
     }
   })
+
+  // WCAG 1.4.10 Reflow: no two-dimensional scrolling at 320 CSS px.
+  test('no page scrolls horizontally on a narrow screen', async ({ page }) => {
+    const pages = [
+      '/',
+      '/about',
+      '/blog',
+      '/papers',
+      '/papers/three-layer-component-architecture',
+      '/projects',
+      '/projects/stargate-loader',
+      '/links',
+      '/series/architecting-for-everything',
+      '/blog/the-44px-illusion',
+      '/blog/the-multizone-gambit',
+      '/blog/why-react-aria-won',
+      '/blog/duck-typing/the-canoe-paddle',
+    ]
+
+    await page.setViewportSize({ width: 320, height: 812 })
+
+    for (const url of pages) {
+      await page.goto(url)
+      await page.waitForLoadState('domcontentloaded')
+
+      // Reports the widest unclipped offender rather than just a number, so a
+      // failure says which element to go and fix.
+      const result = await page.evaluate(() => {
+        const de = document.documentElement
+        const limit = de.clientWidth
+        let worst: string | null = null
+        let worstRight = limit
+
+        for (const el of Array.from(document.querySelectorAll('body *'))) {
+          const rect = el.getBoundingClientRect()
+          if (rect.right <= limit + 0.5 || rect.right <= worstRight) continue
+
+          let parent = el.parentElement
+          let clipped = false
+          while (parent && parent !== de) {
+            const style = getComputedStyle(parent)
+            if (
+              (style.overflowX !== 'visible' || style.overflowY !== 'visible') &&
+              parent.getBoundingClientRect().right <= limit + 0.5
+            ) {
+              clipped = true
+              break
+            }
+            parent = parent.parentElement
+          }
+          if (clipped) continue
+
+          worstRight = rect.right
+          worst = `<${el.tagName.toLowerCase()} class="${el.className}"> reaches ${Math.round(rect.right)}px`
+        }
+
+        return { scrollWidth: de.scrollWidth, clientWidth: limit, worst }
+      })
+
+      expect(
+        result.scrollWidth,
+        `${url} scrolls sideways (${result.scrollWidth} > ${result.clientWidth})${
+          result.worst ? ` — widest offender: ${result.worst}` : ''
+        }`
+      ).toBeLessThanOrEqual(result.clientWidth)
+    }
+  })
 })

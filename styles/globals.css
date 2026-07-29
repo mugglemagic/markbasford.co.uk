@@ -6,61 +6,61 @@
  * Purple palette from Eos — WCAG 2.2 AAA compliant.
  */
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Themis component class scanning */
-@import "@tribepad/themis/tailwind-source.css";
+@import '@tribepad/themis/tailwind-source.css';
 
 /* Content paths for Tailwind v4 */
-@source "../components/**/*.{js,ts,jsx,tsx}";
-@source "../app/**/*.{js,ts,jsx,tsx}";
+@source '../components/**/*.{js,ts,jsx,tsx}';
+@source '../app/**/*.{js,ts,jsx,tsx}';
 
 @layer base {
   /* ── Light Theme (default) ── */
   :root {
-    --page-background: #FAFAFA;
-    --content-background: #FFFFFF;
-    --content-foreground: #0A0A0A;
-    --primary: #60A5FA;
-    --primary-foreground: #0A0A0A;
-    --primary-action: #1D4ED8;
-    --primary-action-hover: #1E40AF;
-    --primary-action-foreground: #FFFFFF;
-    --text-link: #1E40AF;
-    --text-link-hover: #1E3A8A;
-    --ring: #60A5FA;
-    --accent-background: #EFF6FF;
+    --page-background: #fafafa;
+    --content-background: #ffffff;
+    --content-foreground: #0a0a0a;
+    --primary: #60a5fa;
+    --primary-foreground: #0a0a0a;
+    --primary-action: #1d4ed8;
+    --primary-action-hover: #1e40af;
+    --primary-action-foreground: #ffffff;
+    --text-link: #1e40af;
+    --text-link-hover: #1e3a8a;
+    --ring: #60a5fa;
+    --accent-background: #eff6ff;
     --accent-foreground: #171717;
-    --border: #E5E5E5;
+    --border: #e5e5e5;
     --icon: #171717;
-    --input-background: #FFFFFF;
-    --input-border: #E5E5E5;
-    --data: #3B82F6;
-    --data-alt: #2563EB;
-    --menu-background: #FAFAFA;
+    --input-background: #ffffff;
+    --input-border: #e5e5e5;
+    --data: #3b82f6;
+    --data-alt: #2563eb;
+    --menu-background: #fafafa;
     --menu-foreground: #404040;
-    --menu-icon: #3B82F6;
-    --menu-accent: #DBEAFE;
-    --menu-accent-foreground: #1E3A8A;
-    --menu-primary: #3B82F6;
-    --menu-primary-foreground: #FFFFFF;
-    --menu-border: #93C5FD;
-    --menu-ring: #2563EB;
+    --menu-icon: #3b82f6;
+    --menu-accent: #dbeafe;
+    --menu-accent-foreground: #1e3a8a;
+    --menu-primary: #3b82f6;
+    --menu-primary-foreground: #ffffff;
+    --menu-border: #93c5fd;
+    --menu-ring: #2563eb;
     --menu-muted: #525252;
-    --footer-background: #FFFFFF;
-    --footer-foreground: #0A0A0A;
+    --footer-background: #ffffff;
+    --footer-foreground: #0a0a0a;
     --footer-muted: #404040;
-    --footer-border: #E5E5E5;
-    --footer-ring: #3B82F6;
-    --footer-text-link: #1E40AF;
-    --footer-text-link-hover: #1E3A8A;
-    --destructive-background: #DC2626;
-    --destructive-foreground: #FFFFFF;
-    --warning: #F59E0B;
-    --success: #22C55E;
-    --secondary: #F5F5F5;
+    --footer-border: #e5e5e5;
+    --footer-ring: #3b82f6;
+    --footer-text-link: #1e40af;
+    --footer-text-link-hover: #1e3a8a;
+    --destructive-background: #dc2626;
+    --destructive-foreground: #ffffff;
+    --warning: #f59e0b;
+    --success: #22c55e;
+    --secondary: #f5f5f5;
     --secondary-foreground: #171717;
-    --muted: #F5F5F5;
+    --muted: #f5f5f5;
     --muted-foreground: #525252;
 
     --font-heading-display: var(--font-geist-sans), system-ui, sans-serif;
@@ -77,99 +77,99 @@
   }
 
   /* ── Dark Theme ── */
-  [data-theme="dark"] {
-    --page-background: #0A0A0A;
+  [data-theme='dark'] {
+    --page-background: #0a0a0a;
     --content-background: #141414;
-    --content-foreground: #FAFAFA;
-    --primary: #60A5FA;
-    --primary-foreground: #0A0A0A;
-    --primary-action: #60A5FA;
-    --primary-action-hover: #93C5FD;
+    --content-foreground: #fafafa;
+    --primary: #60a5fa;
+    --primary-foreground: #0a0a0a;
+    --primary-action: #60a5fa;
+    --primary-action-hover: #93c5fd;
     --primary-action-foreground: #000000;
-    --text-link: #93C5FD;
-    --text-link-hover: #60A5FA;
-    --ring: #3B82F6;
-    --accent-background: #1E293B;
-    --accent-foreground: #E5E5E5;
+    --text-link: #93c5fd;
+    --text-link-hover: #60a5fa;
+    --ring: #3b82f6;
+    --accent-background: #1e293b;
+    --accent-foreground: #e5e5e5;
     --border: #262626;
-    --icon: #E5E5E5;
+    --icon: #e5e5e5;
     --input-background: #171717;
     --input-border: #333333;
-    --data: #60A5FA;
-    --data-alt: #60A5FA;
+    --data: #60a5fa;
+    --data-alt: #60a5fa;
     --menu-background: #111111;
-    --menu-foreground: #A3A3A3;
-    --menu-icon: #60A5FA;
-    --menu-accent: #1E3A5F;
-    --menu-accent-foreground: #DBEAFE;
-    --menu-primary: #60A5FA;
+    --menu-foreground: #a3a3a3;
+    --menu-icon: #60a5fa;
+    --menu-accent: #1e3a5f;
+    --menu-accent-foreground: #dbeafe;
+    --menu-primary: #60a5fa;
     --menu-primary-foreground: #000000;
-    --menu-border: #1D4ED8;
-    --menu-ring: #3B82F6;
+    --menu-border: #1d4ed8;
+    --menu-ring: #3b82f6;
     --menu-muted: #737373;
     --footer-background: #141414;
-    --footer-foreground: #FAFAFA;
-    --footer-muted: #A3A3A3;
+    --footer-foreground: #fafafa;
+    --footer-muted: #a3a3a3;
     --footer-border: #262626;
-    --footer-ring: #60A5FA;
-    --footer-text-link: #60A5FA;
-    --footer-text-link-hover: #93C5FD;
-    --destructive-background: #DC2626;
-    --destructive-foreground: #FFFFFF;
-    --warning: #F59E0B;
-    --success: #22C55E;
-    --secondary: #1F1F1F;
-    --secondary-foreground: #E5E5E5;
+    --footer-ring: #60a5fa;
+    --footer-text-link: #60a5fa;
+    --footer-text-link-hover: #93c5fd;
+    --destructive-background: #dc2626;
+    --destructive-foreground: #ffffff;
+    --warning: #f59e0b;
+    --success: #22c55e;
+    --secondary: #1f1f1f;
+    --secondary-foreground: #e5e5e5;
     --muted: #262626;
-    --muted-foreground: #A3A3A3;
+    --muted-foreground: #a3a3a3;
   }
 
   /* ── High Contrast Theme (WCAG AAA 7:1) ── */
-  [data-theme="highContrast"] {
+  [data-theme='highContrast'] {
     --page-background: #000000;
-    --content-background: #0A0A0A;
-    --content-foreground: #FFFFFF;
-    --primary: #93C5FD;
+    --content-background: #0a0a0a;
+    --content-foreground: #ffffff;
+    --primary: #93c5fd;
     --primary-foreground: #000000;
-    --primary-action: #93C5FD;
-    --primary-action-hover: #BFDBFE;
+    --primary-action: #93c5fd;
+    --primary-action-hover: #bfdbfe;
     --primary-action-foreground: #000000;
-    --text-link: #93C5FD;
-    --text-link-hover: #BFDBFE;
-    --ring: #60A5FA;
-    --accent-background: #1A1A1A;
-    --accent-foreground: #FFFFFF;
+    --text-link: #93c5fd;
+    --text-link-hover: #bfdbfe;
+    --ring: #60a5fa;
+    --accent-background: #1a1a1a;
+    --accent-foreground: #ffffff;
     --border: #525252;
-    --icon: #FFFFFF;
-    --input-background: #0A0A0A;
+    --icon: #ffffff;
+    --input-background: #0a0a0a;
     --input-border: #525252;
-    --data: #93C5FD;
-    --data-alt: #93C5FD;
+    --data: #93c5fd;
+    --data-alt: #93c5fd;
     --menu-background: #000000;
-    --menu-foreground: #FFFFFF;
-    --menu-icon: #93C5FD;
-    --menu-accent: #1E3A5F;
-    --menu-accent-foreground: #FFFFFF;
-    --menu-primary: #93C5FD;
+    --menu-foreground: #ffffff;
+    --menu-icon: #93c5fd;
+    --menu-accent: #1e3a5f;
+    --menu-accent-foreground: #ffffff;
+    --menu-primary: #93c5fd;
     --menu-primary-foreground: #000000;
-    --menu-border: #60A5FA;
-    --menu-ring: #60A5FA;
-    --menu-muted: #D4D4D4;
-    --footer-background: #0A0A0A;
-    --footer-foreground: #FFFFFF;
-    --footer-muted: #D4D4D4;
+    --menu-border: #60a5fa;
+    --menu-ring: #60a5fa;
+    --menu-muted: #d4d4d4;
+    --footer-background: #0a0a0a;
+    --footer-foreground: #ffffff;
+    --footer-muted: #d4d4d4;
     --footer-border: #525252;
-    --footer-ring: #93C5FD;
-    --footer-text-link: #93C5FD;
-    --footer-text-link-hover: #BFDBFE;
-    --destructive-background: #F87171;
+    --footer-ring: #93c5fd;
+    --footer-text-link: #93c5fd;
+    --footer-text-link-hover: #bfdbfe;
+    --destructive-background: #f87171;
     --destructive-foreground: #000000;
-    --warning: #FBBF24;
-    --success: #4ADE80;
-    --secondary: #1A1A1A;
-    --secondary-foreground: #FFFFFF;
+    --warning: #fbbf24;
+    --success: #4ade80;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #ffffff;
     --muted: #262626;
-    --muted-foreground: #D4D4D4;
+    --muted-foreground: #d4d4d4;
   }
 
   /* ── Typography Scale ── */
@@ -236,14 +236,14 @@
   background-color: var(--shiki-light-bg);
 }
 
-[data-theme="dark"] .shiki,
-[data-theme="dark"] .shiki span {
+[data-theme='dark'] .shiki,
+[data-theme='dark'] .shiki span {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
 }
 
-[data-theme="highContrast"] .shiki,
-[data-theme="highContrast"] .shiki span {
+[data-theme='highContrast'] .shiki,
+[data-theme='highContrast'] .shiki span {
   color: var(--shiki-dark);
   background-color: var(--shiki-dark-bg);
 }
@@ -265,7 +265,9 @@ nav a {
 
 /* Card hover — lift + border glow + shadow (cards, series nav, link cards, skill cards) */
 .card-hover {
-  transition: border-color 200ms ease-out, box-shadow 200ms ease-out;
+  transition:
+    border-color 200ms ease-out,
+    box-shadow 200ms ease-out;
 }
 
 .card-hover:hover {
@@ -274,7 +276,10 @@ nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   .card-hover {
-    transition: border-color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+    transition:
+      border-color 200ms ease-out,
+      box-shadow 200ms ease-out,
+      transform 200ms ease-out;
   }
   .card-hover:hover {
     transform: translateY(-2px);
@@ -282,8 +287,8 @@ nav a {
   }
 }
 
-[data-theme="dark"] .card-hover:hover,
-[data-theme="highContrast"] .card-hover:hover {
+[data-theme='dark'] .card-hover:hover,
+[data-theme='highContrast'] .card-hover:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -326,12 +331,17 @@ nav a {
 }
 
 .profile-hover:hover {
-  box-shadow: 0 0 0 3px var(--primary), 0 0 0 6px var(--page-background), 0 0 20px rgba(96, 165, 250, 0.2) !important;
+  box-shadow:
+    0 0 0 3px var(--primary),
+    0 0 0 6px var(--page-background),
+    0 0 20px rgba(96, 165, 250, 0.2) !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .profile-hover {
-    transition: box-shadow 300ms ease-out, transform 300ms ease-out;
+    transition:
+      box-shadow 300ms ease-out,
+      transform 300ms ease-out;
   }
   .profile-hover:hover {
     transform: scale(1.03);
@@ -340,7 +350,9 @@ nav a {
 
 /* Pill hover — border colour + subtle lift (skill pills, tag badges) */
 .pill-hover {
-  transition: border-color 150ms ease-out, background-color 150ms ease-out;
+  transition:
+    border-color 150ms ease-out,
+    background-color 150ms ease-out;
 }
 
 .pill-hover:hover {
@@ -350,7 +362,10 @@ nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   .pill-hover {
-    transition: border-color 150ms ease-out, background-color 150ms ease-out, transform 150ms ease-out;
+    transition:
+      border-color 150ms ease-out,
+      background-color 150ms ease-out,
+      transform 150ms ease-out;
   }
   .pill-hover:hover {
     transform: translateY(-1px);
@@ -368,7 +383,9 @@ nav a {
 
 /* TOC link hover — colour + left accent */
 .toc-link {
-  transition: color 150ms ease-out, padding-left 150ms ease-out;
+  transition:
+    color 150ms ease-out,
+    padding-left 150ms ease-out;
   border-left: 2px solid transparent;
   padding-left: 0;
 }
@@ -391,7 +408,10 @@ nav a {
 
 /* CTA button hover — primary filled */
 .cta-primary {
-  transition: background-color 200ms ease-out, color 200ms ease-out, box-shadow 200ms ease-out;
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out,
+    box-shadow 200ms ease-out;
 }
 
 .cta-primary:hover {
@@ -402,7 +422,11 @@ nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   .cta-primary {
-    transition: background-color 200ms ease-out, color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+    transition:
+      background-color 200ms ease-out,
+      color 200ms ease-out,
+      box-shadow 200ms ease-out,
+      transform 200ms ease-out;
   }
   .cta-primary:hover {
     transform: translateY(-1px);
@@ -411,7 +435,10 @@ nav a {
 
 /* CTA button hover — outline */
 .cta-outline {
-  transition: border-color 200ms ease-out, background-color 200ms ease-out, color 200ms ease-out;
+  transition:
+    border-color 200ms ease-out,
+    background-color 200ms ease-out,
+    color 200ms ease-out;
 }
 
 .cta-outline:hover {
@@ -422,7 +449,11 @@ nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   .cta-outline {
-    transition: border-color 200ms ease-out, background-color 200ms ease-out, color 200ms ease-out, transform 200ms ease-out;
+    transition:
+      border-color 200ms ease-out,
+      background-color 200ms ease-out,
+      color 200ms ease-out,
+      transform 200ms ease-out;
   }
   .cta-outline:hover {
     transform: translateY(-1px);
@@ -443,7 +474,10 @@ nav a {
 
 @media (prefers-reduced-motion: no-preference) {
   .mobile-nav-transition {
-    transition: max-height 250ms ease-out, opacity 200ms ease-out, border-color 250ms ease-out;
+    transition:
+      max-height 250ms ease-out,
+      opacity 200ms ease-out,
+      border-color 250ms ease-out;
   }
 }
 
@@ -564,6 +598,10 @@ nav a {
   background-color: var(--accent-background);
   padding: 0.125rem 0.375rem;
   border-radius: 0.25rem;
+  /* Inline code is often a file path or identifier with no break opportunity,
+     which would otherwise push the whole page sideways on a narrow screen.
+     Fenced blocks are exempt below — they scroll instead. */
+  overflow-wrap: break-word;
 }
 
 .prose pre {
@@ -578,6 +616,8 @@ nav a {
   padding: 0;
   font-size: 0.875rem;
   line-height: 1.7;
+  /* Code blocks keep their lines intact and scroll horizontally instead. */
+  overflow-wrap: normal;
 }
 
 /* Wide tables scroll inside their own container rather than pushing the page

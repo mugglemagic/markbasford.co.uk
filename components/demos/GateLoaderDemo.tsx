@@ -30,11 +30,17 @@ function gateSize(px: number): React.CSSProperties {
 /**
  * The gate is amber-on-dark by design, so the stage stays dark in every site
  * theme rather than pretending to be a light-mode component.
+ *
+ * `overflow-x: clip` contains the gate's chevron housings: each sits in a
+ * full-width rotated box that reaches ~60px past the ring without painting
+ * anything there, and that empty layout overflow would otherwise widen the
+ * page. Clip rather than hidden — no scroll container, and the vertical axis
+ * is left alone so the ring's glow still spills.
  */
 function Stage({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className="grid min-h-[380px] place-items-center rounded-lg border p-6"
+      className="grid min-h-[380px] place-items-center overflow-x-clip rounded-lg border p-6"
       style={{
         borderColor: 'var(--border)',
         background: 'radial-gradient(ellipse at 50% 30%, #0b1220 0%, #05070c 65%)',
@@ -62,7 +68,10 @@ export function GateLoaderDemo() {
       () => {
         if (!cancelled) setLoadState('ready')
       },
-      () => {
+      (error: unknown) => {
+        // The fallback message is deliberately vague; the reason belongs in the
+        // console, where whoever is debugging it will look.
+        console.error('gate-loader failed to load', error)
         if (!cancelled) setLoadState('error')
       }
     )
