@@ -5,6 +5,7 @@ test.describe('Navigation', () => {
     await page.goto('/')
     const nav = page.getByRole('navigation', { name: 'Main navigation' })
     await expect(nav.getByRole('link', { name: 'About' })).toBeVisible()
+    await expect(nav.getByRole('link', { name: 'Projects' })).toBeVisible()
     await expect(nav.getByRole('link', { name: 'Blog' })).toBeVisible()
     await expect(nav.getByRole('link', { name: 'Papers' })).toBeVisible()
     await expect(nav.getByRole('link', { name: 'Links' })).toBeVisible()

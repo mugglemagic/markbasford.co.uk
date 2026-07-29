@@ -40,6 +40,39 @@ function rehypeExtractHeadings(headings: Heading[]) {
   }
 }
 
+/**
+ * Wraps tables in a focusable scroll container. A wide table would otherwise
+ * push the whole page sideways on a narrow screen, and a scrollable region
+ * has to be reachable by keyboard (WCAG 2.1.1).
+ */
+function rehypeWrapTables() {
+  return (tree: Root) => {
+    // Collected first, then replaced — mutating mid-visit would send the
+    // traversal back into the table we just wrapped.
+    const tables: { node: Element; parent: Root | Element; index: number }[] = []
+
+    visit(tree, 'element', (node: Element, index, parent) => {
+      if (node.tagName === 'table' && parent && typeof index === 'number') {
+        tables.push({ node, parent: parent as Root | Element, index })
+      }
+    })
+
+    for (const { node, parent, index } of tables) {
+      parent.children[index] = {
+        type: 'element',
+        tagName: 'div',
+        properties: {
+          className: ['table-scroll'],
+          tabIndex: 0,
+          role: 'region',
+          'aria-label': 'Table',
+        },
+        children: [node],
+      }
+    }
+  }
+}
+
 function rehypeShikiHighlight() {
   return async (tree: Root) => {
     const codeNodes: { node: Element; parent: Element; lang: string; code: string }[] = []
@@ -101,6 +134,7 @@ export async function renderMarkdown(
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
     .use(rehypeExtractHeadings(headings))
+    .use(rehypeWrapTables)
     .use(rehypeShikiHighlight)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(content)

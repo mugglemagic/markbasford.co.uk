@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllPosts, getAllSeries, getAllPapers } from '@/lib/content'
+import { getAllPosts, getAllSeries, getAllPapers, getAllProjects } from '@/lib/content'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://markbasford.dev'
@@ -7,12 +7,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getAllPosts()
   const series = await getAllSeries()
   const papers = await getAllPapers()
+  const projects = await getAllProjects()
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'monthly', priority: 1 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/papers`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/projects`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/links`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
   ]
 
@@ -46,5 +48,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }))
 
-  return [...staticPages, ...blogPages, ...seriesPages, ...paperPages]
+  const projectPages: MetadataRoute.Sitemap = projects.map(project => ({
+    url: `${baseUrl}/projects/${project.slug}`,
+    lastModified: safeDate(project.frontmatter.date),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...blogPages, ...seriesPages, ...paperPages, ...projectPages]
 }

@@ -8,6 +8,8 @@ import {
   getAllTags,
   getAllPapers,
   getPaperBySlug,
+  getAllProjects,
+  getProjectBySlug,
   slugifySeries,
   unslugifySeries,
 } from '@/lib/content'
@@ -125,6 +127,46 @@ describe('content', () => {
     it('returns null for non-existent paper', async () => {
       const paper = await getPaperBySlug('non-existent-paper')
       expect(paper).toBeNull()
+    })
+  })
+
+  describe('projects', () => {
+    it('returns all projects', async () => {
+      const projects = await getAllProjects()
+      expect(projects.length).toBeGreaterThan(0)
+    })
+
+    it('returns project by slug with its frontmatter', async () => {
+      const project = await getProjectBySlug('stargate-loader')
+      expect(project).not.toBeNull()
+      expect(project!.frontmatter.title).toBe('Stargate Loader')
+      expect(project!.frontmatter.repo).toBe('https://github.com/mugglemagic/stargate-loader')
+      expect(project!.frontmatter.demo).toBe('stargate-loader')
+      // Not on npm yet — the package name is known but there is no URL.
+      expect(project!.frontmatter.npm_package).toBe('gate-loader')
+      expect(project!.frontmatter.npm_url).toBeUndefined()
+    })
+
+    it('normalises date fields to strings', async () => {
+      const projects = await getAllProjects()
+      for (const project of projects) {
+        expect(typeof project.frontmatter.date).toBe('string')
+      }
+    })
+
+    it('sorts by explicit order before date', async () => {
+      const projects = await getAllProjects()
+      const ordered = projects.filter(p => p.frontmatter.order !== undefined)
+      for (let i = 1; i < ordered.length; i++) {
+        expect(ordered[i]!.frontmatter.order!).toBeGreaterThanOrEqual(
+          ordered[i - 1]!.frontmatter.order!
+        )
+      }
+    })
+
+    it('returns null for non-existent project', async () => {
+      const project = await getProjectBySlug('non-existent-project')
+      expect(project).toBeNull()
     })
   })
 

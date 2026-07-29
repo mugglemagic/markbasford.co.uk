@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 
 const BLOG_DIR = path.join(process.cwd(), 'content', 'blog')
 const PAPERS_DIR = path.join(process.cwd(), 'content', 'papers')
+const PROJECTS_DIR = path.join(process.cwd(), 'content', 'projects')
 
 export interface PostFrontmatter {
   ref: string
@@ -36,6 +37,31 @@ export interface PaperFrontmatter {
 export interface Paper {
   slug: string
   frontmatter: PaperFrontmatter
+  content: string
+}
+
+export interface ProjectFrontmatter {
+  title: string
+  tagline: string
+  date: string
+  tags: string[]
+  /** Where the project is in its life: 'Alpha', 'Beta', 'Stable', 'Archived'. */
+  status: string
+  repo: string
+  /** The npm package name, whether or not it is published yet. */
+  npm_package?: string
+  /** Present only once the package is actually on npm. */
+  npm_url?: string
+  /** Key into the demo registry in components/demos. Omit for projects with no demo. */
+  demo?: string
+  /** Ordering on the index page — lower first. Falls back to date. */
+  order?: number
+  published?: boolean
+}
+
+export interface Project {
+  slug: string
+  frontmatter: ProjectFrontmatter
   content: string
 }
 
@@ -136,6 +162,23 @@ export async function getAllPapers(): Promise<Paper[]> {
 export async function getPaperBySlug(slug: string): Promise<Paper | null> {
   const papers = readMarkdownFiles<PaperFrontmatter>(PAPERS_DIR)
   return papers.find(p => p.slug === slug) ?? null
+}
+
+export async function getAllProjects(): Promise<Project[]> {
+  const projects = readMarkdownFiles<ProjectFrontmatter>(PROJECTS_DIR)
+  return projects
+    .filter(p => p.frontmatter.published !== false)
+    .sort((a, b) => {
+      const orderA = a.frontmatter.order ?? Number.MAX_SAFE_INTEGER
+      const orderB = b.frontmatter.order ?? Number.MAX_SAFE_INTEGER
+      if (orderA !== orderB) return orderA - orderB
+      return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime()
+    })
+}
+
+export async function getProjectBySlug(slug: string): Promise<Project | null> {
+  const projects = readMarkdownFiles<ProjectFrontmatter>(PROJECTS_DIR)
+  return projects.find(p => p.slug === slug && p.frontmatter.published !== false) ?? null
 }
 
 export function slugifySeries(name: string): string {

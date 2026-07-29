@@ -580,10 +580,26 @@ nav a {
   line-height: 1.7;
 }
 
+/* Wide tables scroll inside their own container rather than pushing the page
+   sideways. Focusable so the scroll is reachable by keyboard (WCAG 2.1.1). */
+.prose .table-scroll {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.prose .table-scroll:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
 .prose table {
   width: 100%;
   margin-bottom: 1.5rem;
   border-collapse: collapse;
+}
+
+.prose .table-scroll > table {
+  margin-bottom: 0;
 }
 
 .prose th {

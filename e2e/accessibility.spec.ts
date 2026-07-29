@@ -2,7 +2,16 @@ import { test, expect } from '@playwright/test'
 
 test.describe('Accessibility', () => {
   test('every page has at least one h1', async ({ page }) => {
-    const pages = ['/', '/about', '/blog', '/papers', '/links', '/blog/the-44px-illusion']
+    const pages = [
+      '/',
+      '/about',
+      '/blog',
+      '/papers',
+      '/projects',
+      '/projects/stargate-loader',
+      '/links',
+      '/blog/the-44px-illusion',
+    ]
 
     for (const url of pages) {
       await page.goto(url)
@@ -18,7 +27,7 @@ test.describe('Accessibility', () => {
   })
 
   test('every page has main landmark', async ({ page }) => {
-    const pages = ['/', '/about', '/blog', '/links']
+    const pages = ['/', '/about', '/blog', '/links', '/projects']
     for (const url of pages) {
       await page.goto(url)
       await page.waitForLoadState('domcontentloaded')
@@ -47,7 +56,7 @@ test.describe('Accessibility', () => {
   })
 
   test('no heading level is skipped', async ({ page }) => {
-    const pages = ['/', '/blog', '/blog/the-44px-illusion']
+    const pages = ['/', '/blog', '/blog/the-44px-illusion', '/projects/stargate-loader']
 
     for (const url of pages) {
       await page.goto(url)

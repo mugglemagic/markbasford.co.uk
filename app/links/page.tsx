@@ -60,6 +60,12 @@ const links: LinkItem[] = [
     icon: <Image src="/icons/substack.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
   },
   {
+    title: 'Stargate Loader',
+    description: 'A Stargate-style dialing sequence as a zero-dependency Web Component',
+    href: '/projects/stargate-loader',
+    category: 'Projects',
+  },
+  {
     title: 'Themis',
     description: 'WCAG 2.2 AAA component library built on React Aria',
     href: 'https://github.com/Tribepad/themis',

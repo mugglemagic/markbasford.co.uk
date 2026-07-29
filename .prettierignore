@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+pnpm-lock.yaml
+
+# Vendored third-party source — kept byte-identical to upstream
+public/vendor/

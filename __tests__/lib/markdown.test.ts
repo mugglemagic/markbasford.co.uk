@@ -49,6 +49,21 @@ Final content.
       expect(html).toContain('<td')
     })
 
+    it('wraps tables in a focusable scroll container', async () => {
+      const content = `
+| Name | Value |
+|------|-------|
+| A    | 1     |
+`
+      const { html } = await renderMarkdown(content)
+      expect(html).toContain('class="table-scroll"')
+      expect(html).toContain('role="region"')
+      expect(html).toContain('tabindex="0"')
+      // Wrapper first, table inside it — and only wrapped once.
+      expect(html.indexOf('table-scroll')).toBeLessThan(html.indexOf('<table>'))
+      expect(html.match(/table-scroll/g)).toHaveLength(1)
+    })
+
     it('renders inline code', async () => {
       const { html } = await renderMarkdown('Use `const x = 1` here.')
       expect(html).toContain('<code>')
