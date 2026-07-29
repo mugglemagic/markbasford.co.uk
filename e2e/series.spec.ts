@@ -15,7 +15,7 @@ test.describe('Series', () => {
     expect(count).toBe(7)
 
     // First post should be Part 1
-    await expect(items.first()).toContainText('Why We\'re Writing This')
+    await expect(items.first()).toContainText("Why We're Writing This")
   })
 
   test('series page has breadcrumbs', async ({ page }) => {

@@ -20,7 +20,8 @@ export default async function PapersIndexPage() {
         White Papers
       </h1>
       <p className="mb-10 text-base" style={{ color: 'var(--muted-foreground)' }}>
-        In-depth technical papers on component architecture, accessibility, and frontend engineering.
+        In-depth technical papers on component architecture, accessibility, and frontend
+        engineering.
       </p>
 
       <div className="grid gap-4">

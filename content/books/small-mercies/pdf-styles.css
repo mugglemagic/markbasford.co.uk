@@ -48,7 +48,7 @@ h1 {
   margin-bottom: 0.4cm;
   page-break-before: always;
   page-break-after: avoid;
-  color: #60A5FA;
+  color: #60a5fa;
 }
 
 /* Book title - first h1 */
@@ -57,7 +57,7 @@ h1:first-of-type {
   text-align: center;
   margin-top: 4cm;
   page-break-before: avoid;
-  color: #60A5FA;
+  color: #60a5fa;
 }
 
 h2 {
@@ -87,7 +87,7 @@ p {
 }
 
 blockquote {
-  border-left: 3px solid #60A5FA;
+  border-left: 3px solid #60a5fa;
   padding-left: 1em;
   margin-left: 0;
   color: #444;
@@ -98,7 +98,7 @@ blockquote {
 
 blockquote strong {
   font-style: normal;
-  color: #60A5FA;
+  color: #60a5fa;
 }
 
 em {
@@ -142,14 +142,14 @@ code {
   background: #f0f4ff;
   padding: 0.15em 0.3em;
   border-radius: 3px;
-  color: #60A5FA;
+  color: #60a5fa;
 }
 
 pre {
   background: #f8f9fc;
   padding: 0.8em;
   border-radius: 4px;
-  border-left: 3px solid #60A5FA;
+  border-left: 3px solid #60a5fa;
   overflow-x: auto;
   font-size: 7pt;
   line-height: 1.4;
@@ -176,7 +176,7 @@ ol li {
 }
 
 a {
-  color: #60A5FA;
+  color: #60a5fa;
   text-decoration: none;
 }
 
@@ -220,7 +220,7 @@ th {
   font-weight: 700;
   text-align: left;
   padding: 0.5em 0.8em;
-  border-bottom: 2px solid #60A5FA;
+  border-bottom: 2px solid #60a5fa;
 }
 
 td {

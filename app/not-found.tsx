@@ -13,16 +13,10 @@ export default async function NotFound() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6">
       <div className="mb-16 text-center">
-        <h1
-          className="mb-4 text-6xl font-bold"
-          style={{ color: 'var(--text-link)' }}
-        >
+        <h1 className="mb-4 text-6xl font-bold" style={{ color: 'var(--text-link)' }}>
           404
         </h1>
-        <p
-          className="mb-8 text-lg"
-          style={{ color: 'var(--muted-foreground)' }}
-        >
+        <p className="mb-8 text-lg" style={{ color: 'var(--muted-foreground)' }}>
           This page doesn&apos;t exist. It might have been moved or removed.
         </p>
         <Link
@@ -54,10 +48,7 @@ export default async function NotFound() {
               backgroundColor: 'var(--content-background)',
             }}
           >
-            <h3
-              className="text-sm font-semibold"
-              style={{ color: 'var(--content-foreground)' }}
-            >
+            <h3 className="text-sm font-semibold" style={{ color: 'var(--content-foreground)' }}>
               About
             </h3>
             <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
@@ -72,10 +63,7 @@ export default async function NotFound() {
               backgroundColor: 'var(--content-background)',
             }}
           >
-            <h3
-              className="text-sm font-semibold"
-              style={{ color: 'var(--content-foreground)' }}
-            >
+            <h3 className="text-sm font-semibold" style={{ color: 'var(--content-foreground)' }}>
               Blog
             </h3>
             <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
@@ -86,10 +74,7 @@ export default async function NotFound() {
 
         {latestPosts.length > 0 && (
           <div className="mt-8">
-            <h3
-              className="mb-4 text-sm font-semibold"
-              style={{ color: 'var(--muted-foreground)' }}
-            >
+            <h3 className="mb-4 text-sm font-semibold" style={{ color: 'var(--muted-foreground)' }}>
               Latest posts
             </h3>
             <ul className="space-y-2">

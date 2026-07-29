@@ -13,9 +13,7 @@ test.describe('Blog', () => {
   test('blog index shows series cards', async ({ page }) => {
     await page.goto('/blog')
     await expect(page.getByRole('heading', { name: 'Series' })).toBeVisible()
-    await expect(
-      page.getByRole('link', { name: /Architecting for Everything/ })
-    ).toBeVisible()
+    await expect(page.getByRole('link', { name: /Architecting for Everything/ })).toBeVisible()
   })
 
   test('blog post renders with full content', async ({ page }) => {

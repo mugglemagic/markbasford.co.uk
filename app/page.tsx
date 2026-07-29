@@ -33,9 +33,8 @@ export default async function HomePage() {
               className="mb-8 max-w-2xl text-base leading-relaxed"
               style={{ color: 'var(--content-foreground)' }}
             >
-              Principal Software Engineer at Tribepad. I build the foundations, patterns, and
-              tools that let teams ship accessible, performant software with confidence.
-              Creator of{' '}
+              Principal Software Engineer at Tribepad. I build the foundations, patterns, and tools
+              that let teams ship accessible, performant software with confidence. Creator of{' '}
               <span className="font-semibold" style={{ color: 'var(--text-link)' }}>
                 Themis
               </span>{' '}
@@ -138,7 +137,10 @@ export default async function HomePage() {
               className="shrink-0 rounded"
             />
             <div className="flex-1">
-              <p className="mb-0.5 text-lg font-semibold" style={{ color: 'var(--content-foreground)' }}>
+              <p
+                className="mb-0.5 text-lg font-semibold"
+                style={{ color: 'var(--content-foreground)' }}
+              >
                 Subscribe on Substack
               </p>
               <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
@@ -176,15 +178,12 @@ export default async function HomePage() {
             backgroundColor: 'var(--content-background)',
           }}
         >
-          <h3
-            className="mb-2 text-lg font-semibold"
-            style={{ color: 'var(--content-foreground)' }}
-          >
+          <h3 className="mb-2 text-lg font-semibold" style={{ color: 'var(--content-foreground)' }}>
             The Three-Layer Component Architecture
           </h3>
           <p className="text-sm" style={{ color: 'var(--muted-foreground)' }}>
-            A deep dive into building accessible components that separate touch targets,
-            visual design, and content — without compromise.
+            A deep dive into building accessible components that separate touch targets, visual
+            design, and content — without compromise.
           </p>
         </Link>
       </section>

@@ -17,13 +17,7 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'lcov'],
       include: ['lib/**'],
-      exclude: [
-        'node_modules/',
-        '.next/',
-        '**/*.config.*',
-        '**/*.d.ts',
-        'vitest.setup.ts',
-      ],
+      exclude: ['node_modules/', '.next/', '**/*.config.*', '**/*.d.ts', 'vitest.setup.ts'],
       thresholds: {
         branches: 85,
         functions: 90,

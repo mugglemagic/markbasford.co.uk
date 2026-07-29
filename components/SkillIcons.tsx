@@ -1,36 +1,32 @@
 import Image from 'next/image'
 
-function SkillIcon({ src, alt }: { src: string; alt: string }) {
-  return (
-    <Image
-      src={src}
-      alt=""
-      aria-hidden="true"
-      width={24}
-      height={24}
-      className="h-6 w-6"
-    />
-  )
+/**
+ * Decorative only. Every use sits beside the visible `skill.name`, so the icon
+ * is hidden from assistive tech rather than given an alt that would just
+ * repeat the label.
+ */
+function SkillIcon({ src }: { src: string }) {
+  return <Image src={src} alt="" aria-hidden="true" width={24} height={24} className="h-6 w-6" />
 }
 
 export function TypeScriptIcon() {
-  return <SkillIcon src="/icons/typescript.png" alt="TypeScript" />
+  return <SkillIcon src="/icons/typescript.png" />
 }
 
 export function WcagIcon() {
-  return <SkillIcon src="/icons/wcag.svg" alt="WCAG" />
+  return <SkillIcon src="/icons/wcag.svg" />
 }
 
 export function ReactIcon() {
-  return <SkillIcon src="/icons/react.svg" alt="React" />
+  return <SkillIcon src="/icons/react.svg" />
 }
 
 export function NextjsIcon() {
-  return <SkillIcon src="/icons/nextjs.svg" alt="Next.js" />
+  return <SkillIcon src="/icons/nextjs.svg" />
 }
 
 export function LaravelIcon() {
-  return <SkillIcon src="/icons/laravel.svg" alt="Laravel" />
+  return <SkillIcon src="/icons/laravel.svg" />
 }
 
 export const skills = [

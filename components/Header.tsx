@@ -28,11 +28,7 @@ export function Header() {
       }}
     >
       <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-4 sm:px-6">
-        <Link
-          href="/"
-          className="text-lg font-bold"
-          style={{ color: 'var(--content-foreground)' }}
-        >
+        <Link href="/" className="text-lg font-bold" style={{ color: 'var(--content-foreground)' }}>
           Mark Basford
         </Link>
 

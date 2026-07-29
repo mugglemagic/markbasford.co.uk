@@ -12,9 +12,9 @@ test.describe('Papers', () => {
   test('paper page renders full content', async ({ page }) => {
     await page.goto('/papers/three-layer-component-architecture')
     // The page header h1 (not the one inside prose content)
-    await expect(
-      page.locator('article header h1')
-    ).toContainText('Three-Layer Component Architecture')
+    await expect(page.locator('article header h1')).toContainText(
+      'Three-Layer Component Architecture'
+    )
     await expect(page.locator('article header').getByText('Mark Basford')).toBeVisible()
   })
 

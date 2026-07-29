@@ -23,8 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   openGraph: {
     title: 'Mark Basford',
-    description:
-      'Principal Software Engineer at Tribepad. The web should work for everyone.',
+    description: 'Principal Software Engineer at Tribepad. The web should work for everyone.',
     url: SITE_URL,
     siteName: 'Mark Basford',
     locale: 'en_GB',
@@ -34,8 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@markbasford',
     title: 'Mark Basford',
-    description:
-      'Principal Software Engineer at Tribepad. The web should work for everyone.',
+    description: 'Principal Software Engineer at Tribepad. The web should work for everyone.',
   },
   robots: {
     index: true,
@@ -55,8 +53,7 @@ const jsonLd = {
       '@type': 'WebSite',
       name: 'Mark Basford',
       url: SITE_URL,
-      description:
-        'Principal Software Engineer at Tribepad. The web should work for everyone.',
+      description: 'Principal Software Engineer at Tribepad. The web should work for everyone.',
     },
     {
       '@type': 'Person',

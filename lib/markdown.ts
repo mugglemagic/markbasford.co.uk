@@ -78,11 +78,7 @@ function rehypeShikiHighlight() {
     const codeNodes: { node: Element; parent: Element; lang: string; code: string }[] = []
 
     visit(tree, 'element', (node: Element, _index, parent) => {
-      if (
-        node.tagName === 'code' &&
-        parent &&
-        (parent as Element).tagName === 'pre'
-      ) {
+      if (node.tagName === 'code' && parent && (parent as Element).tagName === 'pre') {
         const className = (node.properties?.className as string[]) ?? []
         const langClass = className.find(c => c.startsWith('language-'))
         const lang = langClass ? langClass.replace('language-', '') : 'text'

@@ -5,7 +5,7 @@ import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 
 export const metadata: Metadata = {
   title: 'Links',
-  description: 'Links to Mark Basford\'s profiles, projects, and writing.',
+  description: "Links to Mark Basford's profiles, projects, and writing.",
   alternates: { canonical: '/links' },
 }
 
@@ -43,21 +43,48 @@ const links: LinkItem[] = [
     description: 'Long-form writing and technical articles',
     href: 'https://medium.com/@mugglemagic',
     category: 'Social',
-    icon: <Image src="/icons/medium.jpg" alt="" aria-hidden="true" width={20} height={20} className="rounded-full" />,
+    icon: (
+      <Image
+        src="/icons/medium.jpg"
+        alt=""
+        aria-hidden="true"
+        width={20}
+        height={20}
+        className="rounded-full"
+      />
+    ),
   },
   {
     title: 'DEV Community',
     description: 'Articles and discussions on dev.to',
     href: 'https://dev.to/mugglemagic',
     category: 'Social',
-    icon: <Image src="/icons/devto.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
+    icon: (
+      <Image
+        src="/icons/devto.webp"
+        alt=""
+        aria-hidden="true"
+        width={20}
+        height={20}
+        className="rounded"
+      />
+    ),
   },
   {
     title: 'Substack',
     description: 'Subscribe to new posts on Substack',
     href: 'https://mugglemagic.substack.com',
     category: 'Social',
-    icon: <Image src="/icons/substack.webp" alt="" aria-hidden="true" width={20} height={20} className="rounded" />,
+    icon: (
+      <Image
+        src="/icons/substack.webp"
+        alt=""
+        aria-hidden="true"
+        width={20}
+        height={20}
+        className="rounded"
+      />
+    ),
   },
   {
     title: 'Stargate Loader',

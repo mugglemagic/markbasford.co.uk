@@ -5,7 +5,7 @@ import { skills } from '@/components/SkillIcons'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Principal Software Engineer at Tribepad. The web should work for everyone — accessibility, performance, and architecture aren\'t features, they\'re foundations.',
+    "Principal Software Engineer at Tribepad. The web should work for everyone — accessibility, performance, and architecture aren't features, they're foundations.",
   alternates: { canonical: '/about' },
 }
 
@@ -38,32 +38,29 @@ export default function AboutPage() {
       </div>
 
       <div className="prose">
+        <p>The web should work for everyone. Not most people. Everyone.</p>
         <p>
-          The web should work for everyone. Not most people. Everyone.
-        </p>
-        <p>
-          That&apos;s not an idealistic position — it&apos;s an engineering one.
-          Accessibility, performance, and good architecture aren&apos;t features bolted on at
-          the end. They&apos;re decisions made at the start, and they&apos;re what separates
-          software that genuinely serves people from software that merely functions.
+          That&apos;s not an idealistic position — it&apos;s an engineering one. Accessibility,
+          performance, and good architecture aren&apos;t features bolted on at the end. They&apos;re
+          decisions made at the start, and they&apos;re what separates software that genuinely
+          serves people from software that merely functions.
         </p>
 
         <h2>What I Do</h2>
         <p>
-          As Principal Software Engineer at Tribepad, the work is about more than writing
-          good code. It&apos;s about making sure the team has the foundations, patterns, and
-          clarity to build with confidence — and that the right voices are in the room when
-          decisions get made. The best solutions rarely come from one person. They come from
-          engineers, product owners, designers, and stakeholders all pushing on a problem from
-          different angles until something genuinely good emerges.
+          As Principal Software Engineer at Tribepad, the work is about more than writing good code.
+          It&apos;s about making sure the team has the foundations, patterns, and clarity to build
+          with confidence — and that the right voices are in the room when decisions get made. The
+          best solutions rarely come from one person. They come from engineers, product owners,
+          designers, and stakeholders all pushing on a problem from different angles until something
+          genuinely good emerges.
         </p>
 
         <h2>Approach</h2>
         <p>
-          Performance and velocity aren&apos;t in tension with careful thinking — they depend
-          on it. Architectural decisions made well upfront pay back tenfold in
-          maintainability, reliability, and the freedom to move fast without quietly
-          accumulating debt.
+          Performance and velocity aren&apos;t in tension with careful thinking — they depend on it.
+          Architectural decisions made well upfront pay back tenfold in maintainability,
+          reliability, and the freedom to move fast without quietly accumulating debt.
         </p>
 
         <h2>Skills</h2>
@@ -109,17 +106,17 @@ export default function AboutPage() {
       <div className="prose">
         <h2>Themis</h2>
         <p>
-          I created Themis, a WCAG 2.2 AAA-compliant React component library built on React
-          Aria primitives. It uses a three-layer component architecture that separates touch
-          targets, visual design, and content — proving that accessibility and aesthetics
-          aren&apos;t mutually exclusive.
+          I created Themis, a WCAG 2.2 AAA-compliant React component library built on React Aria
+          primitives. It uses a three-layer component architecture that separates touch targets,
+          visual design, and content — proving that accessibility and aesthetics aren&apos;t
+          mutually exclusive.
         </p>
 
         <h2>Writing</h2>
         <p>
-          I write about the decisions behind building large-scale frontend systems. The blog
-          series &ldquo;Architecting for Everything&rdquo; documents the reasoning behind
-          every major architectural choice — not tutorials, but a reasoning journal.
+          I write about the decisions behind building large-scale frontend systems. The blog series
+          &ldquo;Architecting for Everything&rdquo; documents the reasoning behind every major
+          architectural choice — not tutorials, but a reasoning journal.
         </p>
       </div>
     </div>

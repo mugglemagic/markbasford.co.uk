@@ -6,5 +6,9 @@ playwright-report/
 test-results/
 pnpm-lock.yaml
 
-# Vendored third-party source — kept byte-identical to upstream
-public/vendor/
+# Authored prose, not machine-formatted output. Book chapters, blog posts and
+# skill definitions are hand-wrapped, and the book's pandoc pipeline reads
+# BOOK.md directly — Prettier renormalising list markers, emphasis characters
+# and table padding across them is churn with no upside.
+content/**/*.md
+.claude/skills/**/*.md

@@ -57,7 +57,11 @@ export default async function PaperPage({ params }: PaperPageProps) {
                 /
               </li>
               <li>
-                <Link href="/papers" className="link-hover" style={{ color: 'var(--muted-foreground)' }}>
+                <Link
+                  href="/papers"
+                  className="link-hover"
+                  style={{ color: 'var(--muted-foreground)' }}
+                >
                   Papers
                 </Link>
               </li>
@@ -107,10 +111,7 @@ export default async function PaperPage({ params }: PaperPageProps) {
           </header>
 
           {/* Content */}
-          <div
-            className="prose"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
         </article>
 
         {/* Table of Contents sidebar */}

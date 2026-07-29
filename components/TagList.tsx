@@ -7,7 +7,7 @@ interface TagListProps {
 
 export function TagList({ tags, linked = true }: TagListProps) {
   return (
-    <ul className="flex flex-wrap gap-1.5"  aria-label="Tags">
+    <ul className="flex flex-wrap gap-1.5" aria-label="Tags">
       {tags.map(tag => (
         <li key={tag}>
           {linked ? (

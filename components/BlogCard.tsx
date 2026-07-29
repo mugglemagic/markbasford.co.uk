@@ -17,7 +17,10 @@ export function BlogCard({ post }: BlogCardProps) {
         backgroundColor: 'var(--content-background)',
       }}
     >
-      <div className="mb-2 flex flex-wrap items-center gap-2 text-xs" style={{ color: 'var(--muted-foreground)' }}>
+      <div
+        className="mb-2 flex flex-wrap items-center gap-2 text-xs"
+        style={{ color: 'var(--muted-foreground)' }}
+      >
         {frontmatter.series && (
           <span
             className="rounded-full px-2 py-0.5 text-xs font-medium"
