@@ -21,12 +21,22 @@ test.describe('Projects', () => {
     await expect(breadcrumb.getByRole('link', { name: 'Projects' })).toBeVisible()
   })
 
-  test('project page links to the source and flags the missing npm package', async ({ page }) => {
+  test('project page links to the source and the npm package', async ({ page }) => {
     await page.goto('/projects/stargate-loader')
+
     const github = page.getByRole('link', { name: /View on GitHub/ })
     await expect(github).toHaveAttribute('href', 'https://github.com/mugglemagic/stargate-loader')
     await expect(github).toHaveAttribute('rel', /noopener/)
-    await expect(page.getByText('not published to npm yet')).toBeVisible()
+
+    const npm = page.getByRole('link', { name: /@mugglemagic\/stargate-loader/ })
+    await expect(npm).toHaveAttribute(
+      'href',
+      'https://www.npmjs.com/package/@mugglemagic/stargate-loader'
+    )
+    await expect(npm).toHaveAttribute('rel', /noopener/)
+
+    // The "not published yet" placeholder must be gone.
+    await expect(page.getByText('not published to npm yet')).toHaveCount(0)
   })
 
   test('the demo loads and the gate dials in manual mode', async ({ page }) => {

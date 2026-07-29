@@ -18,6 +18,7 @@
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
+    "@mugglemagic/stargate-loader": "^0.1.0",
     "@tribepad/themis": "^1.0.15",
     "@types/hast": "^3.0.4",
     "@vercel/analytics": "^2.0.1",

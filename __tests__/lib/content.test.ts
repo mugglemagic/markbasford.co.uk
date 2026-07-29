@@ -34,7 +34,7 @@ describe('content', () => {
       const posts = await getAllPosts()
       const post = posts.find(p => p.slug === 'why-we-are-writing-this')
       expect(post).toBeDefined()
-      expect(post!.frontmatter.title).toBe('Why We\'re Writing This (And Why Now)')
+      expect(post!.frontmatter.title).toBe("Why We're Writing This (And Why Now)")
       expect(post!.frontmatter.author).toBe('Mark Basford')
       expect(post!.frontmatter.series).toBe('Architecting for Everything')
       expect(post!.frontmatter.tags).toContain('architecture')
@@ -142,9 +142,10 @@ describe('content', () => {
       expect(project!.frontmatter.title).toBe('Stargate Loader')
       expect(project!.frontmatter.repo).toBe('https://github.com/mugglemagic/stargate-loader')
       expect(project!.frontmatter.demo).toBe('stargate-loader')
-      // Not on npm yet — the package name is known but there is no URL.
-      expect(project!.frontmatter.npm_package).toBe('gate-loader')
-      expect(project!.frontmatter.npm_url).toBeUndefined()
+      expect(project!.frontmatter.npm_package).toBe('@mugglemagic/stargate-loader')
+      expect(project!.frontmatter.npm_url).toBe(
+        'https://www.npmjs.com/package/@mugglemagic/stargate-loader'
+      )
     })
 
     it('normalises date fields to strings', async () => {

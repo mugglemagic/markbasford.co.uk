@@ -9,17 +9,18 @@ tags:
   - Zero Dependencies
 status: Alpha
 repo: https://github.com/mugglemagic/stargate-loader
-npm_package: gate-loader
+npm_package: '@mugglemagic/stargate-loader'
+npm_url: https://www.npmjs.com/package/@mugglemagic/stargate-loader
 demo: stargate-loader
 order: 1
 ---
 
 ## What it is
 
-`gate-loader` is a custom element that turns waiting into a dialing sequence. The
-inner ring spins, seven of the gate's nine chevrons encode Earth's canonical
-address — `28, 26, 5, 36, 11, 29, 1` — and when the seventh locks, the wormhole
-opens.
+`<gate-loader>` is a custom element that turns waiting into a dialing sequence.
+The inner ring spins, seven of the gate's nine chevrons encode Earth's canonical
+address — `28, 26, 5, 36, 11, 29, 1` — the point of origin locks under the master
+chevron, and the wormhole opens.
 
 It is a single Web Component with no dependencies and no framework. Drop the
 module on a page and `<gate-loader>` works, in React, in Vue, in a Rails view,
@@ -38,27 +39,32 @@ abstract percentages into something you can watch resolve.
 
 ## Using it
 
-Once it is published, install and import:
-
 ```bash
-npm install gate-loader
+npm install @mugglemagic/stargate-loader
 ```
 
 ```js
-import 'gate-loader'
+import '@mugglemagic/stargate-loader'
 ```
 
 Or pull it straight off a CDN:
 
 ```html
-<script type="module" src="https://unpkg.com/gate-loader"></script>
+<script type="module" src="https://unpkg.com/@mugglemagic/stargate-loader"></script>
 ```
 
-Then use it like any other element:
+Then use it like any other element — the import registers the tag, and nothing
+else on the page needs to know it exists:
 
 ```html
 <gate-loader size="320"></gate-loader>
 ```
+
+The package name is scoped, the element is not. That is deliberate: the tag name
+is a global, and `<gate-loader>` is the honest description of the thing.
+
+The demo above is running the published package, not a copy of the source. Same
+module you would get from `npm install`.
 
 ### Driving it from real progress
 
@@ -94,14 +100,14 @@ await gate.complete()
 
 ### API
 
-| Attribute   | Property   | Values                            | Default             |
-| ----------- | ---------- | --------------------------------- | ------------------- |
-| `size`      | —          | px or any CSS length              | `320px`             |
-| `mode`      | `mode`     | `loop` \| `manual`                | `loop`              |
-| `canon`     | `canon`    | `series` \| `movie`               | `series`            |
-| `address`   | `address`  | seven glyph numbers, 1–39         | `28,26,5,36,11,29,1` |
-| `no-status` | —          | boolean attribute                 | absent              |
-| —           | `progress` | `0`–`1`                           | `0`                 |
+| Attribute   | Property   | Values                     | Default              | Notes                                          |
+| ----------- | ---------- | -------------------------- | -------------------- | ---------------------------------------------- |
+| `size`      | —          | px or any CSS length       | `320px`              | Or set the `--size` custom property instead    |
+| `mode`      | `mode`     | `loop` \| `manual`         | `loop`               | `loop` dials forever; `manual` waits for you   |
+| `canon`     | `canon`    | `series` \| `movie`        | `series`             | Which chevron does the clunking                |
+| `address`   | `address`  | seven glyph numbers, 1–39  | `28,26,5,36,11,29,1` | Invalid input falls back to Earth's address    |
+| `no-status` | —          | boolean attribute          | absent               | Hides the live region                          |
+| —           | `progress` | `0`–`1`                    | `0`                  | Manual mode. Monotonic — lower it via `reset()` |
 
 **Methods** — `engageNext()`, `complete()` and `reset()`, the first two
 returning a promise that resolves when the engagement queue drains.
@@ -130,6 +136,23 @@ gate-loader {
 too, along with the `::part(gate)`, `::part(horizon)` and `::part(status)`
 shadow parts for anything the properties do not reach.
 
+`--size` is worth knowing about. It does the same job as the `size` attribute,
+but because it is a custom property you can make it responsive — which is
+exactly what the demo on this page does, so the gate never outgrows a phone:
+
+```css
+gate-loader {
+  --size: min(320px, calc(100vw - 5rem));
+}
+```
+
+### Where the glyphs come from
+
+The 39 Milky Way glyphs are inlined as data URIs at publish time, so the
+component makes no network requests and hotlinks nothing. That matters more
+than it sounds: a loading animation that has to load something first is a
+contradiction, and one that quietly leans on someone else's servers is rude.
+
 ## The accessibility bit
 
 A loading animation is exactly the kind of component that quietly excludes
@@ -149,11 +172,18 @@ announce forever.
 
 **Not relying on colour.** Chevron state is carried by brightness and a lit
 glyph as well as hue, and the status line says in words what the ring shows in
-light.
+light. The glyphs themselves are `aria-hidden` decoration — they are scenery,
+not information.
 
-## Caveats
+## Licensing, and the fan-work bit
 
-It is a fan work. The glyph artwork comes from Wikimedia Commons under
-CC BY-SA 3.0, and the designs themselves belong to the Stargate franchise —
-MGM and Amazon — who have not endorsed any of this. The code is MIT. Use it
-for something non-commercial and delightful.
+Three layers, deliberately kept apart:
+
+- **The code** is MIT. Do what you like with it.
+- **The glyph artwork** comes from Wikimedia Commons under CC BY-SA 3.0. If you
+  redistribute modified glyphs, share-alike applies to them.
+- **The franchise** is not mine. Stargate, the gate design and the glyph designs
+  belong to MGM and Amazon, who have endorsed none of this.
+
+So: a non-commercial fan work. Don't ship it inside something you're selling,
+and don't strip the attributions. Beyond that, enjoy yourself.

@@ -1,12 +1,19 @@
 import type { DetailedHTMLProps, HTMLAttributes, Ref } from 'react'
 
 /**
- * Types for the `gate-loader` custom element vendored at
- * `public/vendor/gate-loader/`. Mirrors the upstream `gate-loader.d.ts`:
- * https://github.com/mugglemagic/stargate-loader
+ * JSX support for the `gate-loader` custom element, plus a local copy of its
+ * shape.
  *
- * When the package lands on npm these can be dropped in favour of the
- * types it ships.
+ * @mugglemagic/stargate-loader ships perfectly good declarations, but
+ * 0.1.0 declares `exports` as a bare string with no `types` condition, so
+ * TypeScript resolves through the exports map and never finds them. Until a
+ * release fixes that, the element's shape is mirrored here from the upstream
+ * `gate-loader.d.ts`. Swap this for the package's own `GateLoader` type once
+ * the suppression in components/demos/loadGateLoader.ts can go.
+ *
+ * The JSX declaration below is needed either way — the package teaches
+ * TypeScript about `HTMLElementTagNameMap`, but nothing teaches JSX about the
+ * tag.
  */
 export interface GateLoaderElement extends HTMLElement {
   /** `loop` dials continuously; `manual` is driven by the caller. */
